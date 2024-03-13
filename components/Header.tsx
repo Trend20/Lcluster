@@ -4,11 +4,17 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="py-10 px-36 flex w-full">
+    <div className="px-36 flex w-full py-5">
       <div className="w-full flex justify-between items-center">
-        <div>
-          <Link className="flex items-center space-x-2" href="/">
-            <Image src="logo1.svg" alt="logo" width="200" height="200" />
+        <div className="flex justify-start w-36">
+          <Link className="flex items-center w-full space-x-2" href="/">
+            <Image
+              src="logo1.svg"
+              alt="logo"
+              width="100"
+              height="100"
+              className="w-32"
+            />
           </Link>
         </div>
         <div className="hidden md:flex">
