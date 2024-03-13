@@ -19,7 +19,7 @@ const ProductPitch = () => {
         </div>
         <div className="flex justify-center items-center w-3/4 mt-10">
           <div className="grid gap-6 lg:grid-cols-2">
-            <div className="flex flex-col space-y-2 shadow-2xl p-8">
+            <div className="flex flex-col space-y-2 shadow-2xl p-8 bg-boxdark">
               <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
                 <MdAccessTime size={25} />
               </i>
@@ -30,7 +30,7 @@ const ProductPitch = () => {
                 time.
               </p>
             </div>
-            <div className="space-y-2 flex flex-col shadow-2xl p-8">
+            <div className="space-y-2 flex flex-col shadow-2xl p-8 bg-boxdark">
               <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
                 <LuFileCode size={25} />
               </i>
@@ -41,7 +41,7 @@ const ProductPitch = () => {
                 unsupported dependencies.
               </p>
             </div>
-            <div className="space-y-2 flex flex-col shadow-2xl p-8">
+            <div className="space-y-2 flex flex-col shadow-2xl p-8 bg-boxdark">
               <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
                 <GoShare size={25} />
               </i>
@@ -54,7 +54,7 @@ const ProductPitch = () => {
                 experiences and insights about specific libraries.
               </p>
             </div>
-            <div className="space-y-2 flex flex-col shadow-2xl p-8">
+            <div className="space-y-2 flex flex-col shadow-2xl p-8 bg-boxdark">
               <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
                 <CgInsights size={25} />
               </i>

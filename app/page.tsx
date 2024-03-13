@@ -1,3 +1,4 @@
+import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import ProductPitch from "@/components/ProductPitch";
 import Spotlight from "@/components/Spotlight";
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Spotlight />
       <ProductPitch />
+      <Features />
     </main>
   );
 }
