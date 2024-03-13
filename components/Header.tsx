@@ -1,13 +1,14 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <div className="py-10 px-36 flex w-full">
       <div className="w-full flex justify-between items-center">
         <div>
-          <Link className="flex items-center space-x-2" href="#">
-            <span className="font-bold">CodeCrony</span>
+          <Link className="flex items-center space-x-2" href="/">
+            <Image src="logo1.svg" alt="logo" width="200" height="200" />
           </Link>
         </div>
         <div className="hidden md:flex">
@@ -26,7 +27,7 @@ const Header = () => {
         <div>
           <Link
             href={"/login"}
-            className=" bg-teal p-3 rounded-md outline-none"
+            className="w-40 bg-teal p-3 rounded-md outline-none"
           >
             Try for Free
           </Link>
