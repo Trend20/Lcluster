@@ -12,8 +12,8 @@ const Features = () => {
             A Productivity Tool Made for Developers!
           </h2>
           <p className="max-w-[700px] m-auto text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            The platform provides everything you need to build, deploy, and
-            scale your applications.
+            The platform provides libraries you need to build, deploy, and scale
+            your applications.
           </p>
         </div>
         <div className="m-auto mt-20 grid max-w-sm items-start gap-6 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
