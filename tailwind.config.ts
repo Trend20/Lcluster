@@ -50,6 +50,7 @@ const config: Config = {
       warning: "#FFA70B",
       grey: "#cfd0d1",
       lightblue: "#cee4f5",
+      teal: "#4CCD99",
     },
     // screens: {
     //   "2xsm": "375px",

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "CodeCrony",
@@ -13,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="flex w-full flex-col">
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

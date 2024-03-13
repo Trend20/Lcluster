@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="p-4">
-      <div className="flex justify-between items-center">
+    <div className="py-10 px-36 flex w-full">
+      <div className="w-full flex justify-between items-center">
         <div>
           <Link className="flex items-center space-x-2" href="#">
             <span className="font-bold">CodeCrony</span>
@@ -24,7 +24,12 @@ const Header = () => {
           </nav>
         </div>
         <div>
-          <Link href={"/login"}>Try for Free</Link>
+          <Link
+            href={"/login"}
+            className=" bg-teal p-3 rounded-md outline-none"
+          >
+            Try for Free
+          </Link>
         </div>
       </div>
     </div>
