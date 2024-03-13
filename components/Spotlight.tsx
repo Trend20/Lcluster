@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Spotlight = () => {
   return (
-    <section className="w-full py-12 lg:py-16">
+    <section className="w-full py-12 lg:py-16 px-36">
       <div className="flex flex-col items-center px-4 md:px-6">
         <div className="text-center">
           <p className="max-w-[700px] text-normal text-gray-500 dark:text-gray-400">
