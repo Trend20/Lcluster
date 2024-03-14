@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,14 +7,14 @@ const Header = () => {
   return (
     <div className="px-50 flex w-full py-5">
       <div className="w-full flex justify-between items-center">
-        <div className="flex justify-start w-36">
-          <Link className="flex items-center w-full space-x-2" href="/">
+        <div className="flex justify-start w-1/4 items-center">
+          <Link className="flex items-center space-x-2" href="/">
             <Image
-              src="logo1.svg"
+              src="/logo1.png"
               alt="logo"
-              width="100"
-              height="100"
-              className="w-32"
+              width="200"
+              height="200"
+              className="w-50"
             />
           </Link>
         </div>
@@ -31,10 +31,10 @@ const Header = () => {
             </Link>
           </nav>
         </div>
-        <div>
+        <div className="w-1/4 flex justify-end items-center">
           <Link
             href={"/auth/signin"}
-            className="w-40 bg-teal p-3 rounded-md outline-none"
+            className="flex justify-center items-center w-36 bg-teal p-3 rounded-md outline-none"
           >
             Try for Free
           </Link>
