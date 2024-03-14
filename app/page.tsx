@@ -1,4 +1,5 @@
 import Features from "@/components/Features";
+import FrequentlyAsked from "@/components/FrequentlyAsked";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import ProductPitch from "@/components/ProductPitch";
@@ -12,6 +13,7 @@ export default function Home() {
       <ProductPitch />
       <Features />
       <Pricing />
+      <FrequentlyAsked />
     </main>
   );
 }

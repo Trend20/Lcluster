@@ -7,7 +7,7 @@ import { FiLinkedin } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <div className="container w-full py-10 px-36 flex items-center justify-center gap-4 text-center md:flex-row md:gap-6">
+    <div className="w-full py-10 px-36 flex items-center justify-center gap-4 text-center md:flex-row md:gap-6">
       <div className="flex items-center justify-center gap-4">
         <Link
           className="rounded-full border border-gray-200 border-gray-200 hover:border-gray-800/90 dark:border-gray-800 dark:hover:border-gray-200 bg-gray-50 w-8 h-8 flex items-center justify-center overflow-hidden"
