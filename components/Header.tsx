@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -17,15 +18,15 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div className="hidden md:flex">
+        <div className="md:flex w-1/4 flex justify-center items-center">
           <nav className="flex items-center space-x-2">
-            <Link className="text-sm font-medium" href="#">
+            <Link className="text-normal" href="#features">
               Features
             </Link>
-            <Link className="text-sm font-medium" href="#">
+            <Link className="text-normal" href="#pricing">
               Pricing
             </Link>
-            <Link className="text-sm font-medium" href="#">
+            <Link className="text-normal" href="#contact">
               Contact
             </Link>
           </nav>

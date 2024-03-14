@@ -40,7 +40,10 @@ const FrequentlyAsked = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col py-10 mt-10 justify-center items-center">
+      <div
+        className="flex flex-col py-10 mt-10 justify-center items-center"
+        id="contact"
+      >
         <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
         <p>Talk to our team.</p>
         <Link

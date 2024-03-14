@@ -5,7 +5,7 @@ import { MdManageHistory } from "react-icons/md";
 
 const Features = () => {
   return (
-    <section className="w-full py-12 md:py-24">
+    <section className="w-full py-12 md:py-24" id="features">
       <div className="flex flex-col items-center justify-center space-y-4 px-4 md:px-6">
         <div className="space-y-2 text-center flex flex-col justify-center">
           <h2 className="text-3xl font-semibold tracking-tighter sm:text-4xl">
