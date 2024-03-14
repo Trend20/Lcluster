@@ -66,7 +66,7 @@ const Pricing = () => {
             </div>
             <hr className="w-full border my-8" />
             <div className="flex flex-col">
-              <h1 className="text-5xl font-extrabold leading-10">$10</h1>
+              <h1 className="text-5xl font-extrabold leading-10">$5</h1>
               <p className="mt-3">Billed Yearly</p>
             </div>
             <h6 className="font-bold leading-10 mt-5">Whats Included</h6>
@@ -105,7 +105,7 @@ const Pricing = () => {
             </div>
             <hr className="w-full border my-8" />
             <div className="flex flex-col">
-              <h1 className="text-5xl font-extrabold leading-10">$30</h1>
+              <h1 className="text-5xl font-extrabold leading-10">$20</h1>
               <p className="mt-3">Billed Yearly</p>
             </div>
             <h6 className="font-bold leading-10 mt-5">Whats Included</h6>

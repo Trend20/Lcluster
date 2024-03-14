@@ -8,13 +8,12 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-2 text-center justify-center m-auto">
           <div className="space-y-2 text-center flex flex-col justify-center items-center">
             <h1 className="text-3xl font-bold capitalize w-[880px] leading-10 sm:text-4xl lg:text-5xl/none">
-              The Fastest way to get your project up and running.
+              Access third-party libraries effortlessly.
             </h1>
             <p className="mx-auto leading-3 items-center max-w-[600px] py-8 text-center text-gray-500 md:text-xl dark:text-gray-400">
-              CodeCrony gives you access to unlimited libraries and resources to
-              help you ship your product faster. You dont have to browse the
-              internet looking for third-party libraries because we have it all
-              here.
+              Gain access to unlimited libraries and resources to help you ship
+              your products faster. Focus on Implementation as we gather the
+              resources for you.
             </p>
           </div>
           <Link

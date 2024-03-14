@@ -45,7 +45,7 @@ const Signin = () => {
         </form>
       </div>
       <p className="mt-8 text-lg flex items-center">
-        Don't have an account yet?
+        Don&#39;t have an account yet?
         <Link href="/auth/signup" className="ml-3 flex items-center text-teal">
           Sign Up{" "}
           <i className="flex ml-3">
