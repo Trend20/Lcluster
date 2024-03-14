@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import faqData from "../utils/data.json";
 import { FiPlus } from "react-icons/fi";
 import { LiaTimesSolid } from "react-icons/lia";
+import Link from "next/link";
 
 const FrequentlyAsked = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -11,7 +12,7 @@ const FrequentlyAsked = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="flex px-36 w-full justify-center items-center py-30">
+    <div className="flex flex-col px-36 w-full justify-center items-center py-30">
       <div className="w-1/2 mx-auto flex flex-col justify-center items-center p-6">
         <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
         <div className="space-y-4 w-full mt-10">
@@ -38,6 +39,17 @@ const FrequentlyAsked = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex flex-col py-10 mt-10 justify-center items-center">
+        <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
+        <p>Talk to our team.</p>
+        <Link
+          className="p-3 mt-3 w-36 justify-center flex items-center border border-teal rounded-md outline-none"
+          href="mailto:enockomondi305@gmail.com"
+          target="_blank"
+        >
+          Contact
+        </Link>
       </div>
     </div>
   );

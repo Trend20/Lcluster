@@ -18,14 +18,19 @@ const Pricing = () => {
             </p>
           </div>
         </div>
-        <div className="grid w-full items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-          <div className="flex flex-col w-full rounded-md shadow-2xl p-5 bg-boxdark">
+        <div className="grid w-3/4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-col w-[360px] rounded-md shadow-2xl p-5 bg-boxdark">
             <div className="flex items-center gap-2">
               <BsFillBagCheckFill className="w-5 h-5" />
               <h3 className="text-lg font-bold">Free</h3>
             </div>
             <hr className="w-full border my-8" />
-            <h6 className="font-bold leading-10">Whats Included</h6>
+
+            <div className="flex flex-col">
+              <h1 className="text-5xl font-extrabold leading-10">$0</h1>
+              <p className="mt-3">Free forever</p>
+            </div>
+            <h6 className="font-bold leading-10 mt-5">Whats Included</h6>
             <p className="flex items-center w-full py-2 text-sm text-gray-500 dark:text-gray-400">
               <i className="flex p-2 justify-center border border-body rounded-full mr-5">
                 <BsFillBookmarkCheckFill fill="#4ccd99" />
@@ -50,17 +55,21 @@ const Pricing = () => {
               </i>
               Start with the essentials
             </p>
-            <button className="p-3 bg-teal rounded-md outline-none">
+            <button className="p-3 mt-8 bg-teal rounded-md outline-none">
               Subscribe
             </button>
           </div>
-          <div className="flex flex-col border-2 w-full border-teal rounded-md shadow-2xl p-5 bg-boxdark">
+          <div className="flex flex-col border-2 w-[360px] border-teal rounded-md shadow-2xl p-5 bg-boxdark">
             <div className="flex items-center gap-2">
               <BsFillBagCheckFill className="w-5 h-5" />
               <h3 className="text-lg font-bold">Pro</h3>
             </div>
             <hr className="w-full border my-8" />
-            <h6 className="font-bold leading-10">Whats Included</h6>
+            <div className="flex flex-col">
+              <h1 className="text-5xl font-extrabold leading-10">$10</h1>
+              <p className="mt-3">Billed Yearly</p>
+            </div>
+            <h6 className="font-bold leading-10 mt-5">Whats Included</h6>
             <p className="flex items-center w-full py-2 text-sm text-gray-500 dark:text-gray-400">
               <i className="flex p-2 justify-center border border-body rounded-full mr-5">
                 <BsFillBookmarkCheckFill fill="#4ccd99" />
@@ -85,17 +94,21 @@ const Pricing = () => {
               </i>
               Start with the essentials
             </p>
-            <button className="p-3 bg-teal rounded-md outline-none">
+            <button className="p-3 mt-8 bg-teal rounded-md outline-none">
               Subscribe
             </button>
           </div>
-          <div className="flex flex-col w-full rounded-md shadow-2xl p-5 bg-boxdark">
+          <div className="flex flex-col w-[360px] rounded-md shadow-2xl p-5 bg-boxdark">
             <div className="flex items-center gap-2">
               <BsFillBagCheckFill className="w-5 h-5" />
               <h3 className="text-lg font-bold">Team</h3>
             </div>
             <hr className="w-full border my-8" />
-            <h6 className="font-bold leading-10">Whats Included</h6>
+            <div className="flex flex-col">
+              <h1 className="text-5xl font-extrabold leading-10">$30</h1>
+              <p className="mt-3">Billed Yearly</p>
+            </div>
+            <h6 className="font-bold leading-10 mt-5">Whats Included</h6>
             <p className="flex items-center w-full py-2 text-sm text-gray-500 dark:text-gray-400">
               <i className="flex p-2 justify-center border border-body rounded-full mr-5">
                 <BsFillBookmarkCheckFill fill="#4ccd99" />
@@ -120,7 +133,7 @@ const Pricing = () => {
               </i>
               Start with the essentials
             </p>
-            <button className="p-3 bg-teal rounded-md outline-none">
+            <button className="p-3 mt-8 bg-teal rounded-md outline-none">
               Subscribe
             </button>
           </div>
