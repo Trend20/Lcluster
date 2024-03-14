@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <div>
           <Link
-            href={"/login"}
+            href={"/auth/signin"}
             className="w-40 bg-teal p-3 rounded-md outline-none"
           >
             Try for Free
