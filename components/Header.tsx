@@ -36,16 +36,15 @@ const Header = () => {
             />
           </Link>
         </div>
-        {/* px-50 flex w-full py-5 fixed inset-x-0 top-0 shadow-sm translate-y-[scroll] transition-transform */}
         <div className="md:flex w-1/4 flex justify-center items-center">
-          <nav className="flex items-center space-x-2">
-            <Link className="text-normal" href="#features">
+          <nav className="flex items-center space-x-10">
+            <Link className="text-normal font-medium" href="#features">
               Features
             </Link>
-            <Link className="text-normal" href="#pricing">
+            <Link className="text-normal font-medium" href="#pricing">
               Pricing
             </Link>
-            <Link className="text-normal" href="#contact">
+            <Link className="text-normal font-medium" href="#contact">
               Contact
             </Link>
           </nav>

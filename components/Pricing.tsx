@@ -3,7 +3,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { BsFillBookmarkCheckFill } from "react-icons/bs";
 const Pricing = () => {
   return (
-    <div className="w-full pt-12 pb-16 px-36" id="pricing">
+    <div className="w-full py-30 mt-20 px-36" id="pricing">
       <div className="flex flex-col w-full justify-center items-center gap-8 px-4 md:px-6">
         <div className="space-y-2 text-center">
           <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">

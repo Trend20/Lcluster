@@ -3,12 +3,13 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="w-full py-20 flex flex-1 flex-col items-center">
-      <div className="container flex flex-col gap-2 px-4 md:gap-4 md:px-6">
+    <section className="w-full py-20 mt-40 flex flex-1 flex-col items-center">
+      <div className="flex flex-col gap-2 px-4 md:gap-4 md:px-6">
         <div className="flex flex-col items-center gap-2 text-center justify-center m-auto">
-          <div className="space-y-2 text-center flex flex-col justify-center items-center">
-            <h1 className="text-3xl font-bold capitalize w-[880px] leading-10 sm:text-4xl lg:text-5xl/none">
-              Access third-party libraries effortlessly.
+          <div className="text-center flex flex-col justify-center items-center">
+            <h1 className="text-5xl font-extrabold capitalize w-[880px] leading-relaxed">
+              Access <span className="text-teal">third-party</span> libraries{" "}
+              <span className="text-teal">effortlessly</span>.
             </h1>
             <p className="mx-auto leading-3 items-center max-w-[600px] py-8 text-center text-gray-500 md:text-xl dark:text-gray-400">
               Gain access to unlimited libraries and resources to help you ship

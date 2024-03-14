@@ -6,7 +6,7 @@ import { CgInsights } from "react-icons/cg";
 
 const ProductPitch = () => {
   return (
-    <section className="w-full justify-center items-center flex py-12 px-36 md:py-24 lg:py-32 xl:py-40">
+    <section className="w-full justify-center items-center flex py-12 mt-20 px-36 md:py-24 lg:py-32 xl:py-40">
       <div className="w-full justify-center flex flex-col items-center gap-4 px-4 md:px-6">
         <div className="text-center">
           <h1 className="text-3xl font-semibold tracking-tighter sm:text-5xl md:text-4xl/none">
