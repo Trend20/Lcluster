@@ -1,6 +1,8 @@
+import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 const Signin = () => {
   return (
@@ -10,13 +12,13 @@ const Signin = () => {
           <i className="mr-8">
             <FcGoogle size={25} />
           </i>
-          Sign up with Google
+          Sign in with Google
         </button>
         <button className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center">
           <i className="mr-8">
             <FaGithub size={25} />
           </i>
-          Sign up with GitHub
+          Sign in with GitHub
         </button>
       </div>
       <div className="w-1/4 mt-15">
@@ -42,6 +44,15 @@ const Signin = () => {
           </button>
         </form>
       </div>
+      <p className="mt-8 text-lg flex items-center">
+        Don't have an account yet?
+        <Link href="/auth/signup" className="ml-3 flex items-center text-teal">
+          Sign Up{" "}
+          <i className="flex ml-3">
+            <HiOutlineArrowLongRight />
+          </i>
+        </Link>
+      </p>
     </div>
   );
 };
