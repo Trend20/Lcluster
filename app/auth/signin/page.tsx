@@ -21,7 +21,12 @@ const Signin = () => {
           Sign in with GitHub
         </button>
       </div>
-      <div className="w-1/4 mt-15">
+      <div className="flex items-center w-1/4 my-10">
+        <hr className="border w-1/2" />
+        OR
+        <hr className="border w-1/2" />
+      </div>
+      <div className="w-1/4">
         <form>
           <div className="flex flex-col">
             <label htmlFor="email" className="text-lg">
