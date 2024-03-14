@@ -3,7 +3,7 @@ import { BsFillBagCheckFill } from "react-icons/bs";
 import { BsFillBookmarkCheckFill } from "react-icons/bs";
 const Pricing = () => {
   return (
-    <div className="w-full pt-12 pb-16 grid-inset">
+    <div className="w-full pt-12 pb-16 px-36">
       <div className="flex flex-col w-full justify-center items-center gap-8 px-4 md:px-6">
         <div className="space-y-2 text-center">
           <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
@@ -18,12 +18,13 @@ const Pricing = () => {
             </p>
           </div>
         </div>
-        <div className="grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
-          <div className="flex flex-col gap-1 rounded-md shadow-2xl p-5 bg-boxdark">
+        <div className="grid w-full items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+          <div className="flex flex-col w-full rounded-md shadow-2xl p-5 bg-boxdark">
             <div className="flex items-center gap-2">
               <BsFillBagCheckFill className="w-5 h-5" />
               <h3 className="text-lg font-bold">Free</h3>
             </div>
+            <hr className="w-full border my-8" />
             <h6 className="font-bold leading-10">Whats Included</h6>
             <p className="flex items-center w-full py-2 text-sm text-gray-500 dark:text-gray-400">
               <i className="flex p-2 justify-center border border-body rounded-full mr-5">
@@ -53,11 +54,12 @@ const Pricing = () => {
               Subscribe
             </button>
           </div>
-          <div className="flex flex-col gap-1 border-2 border-teal rounded-md shadow-2xl p-5 bg-boxdark">
+          <div className="flex flex-col border-2 w-full border-teal rounded-md shadow-2xl p-5 bg-boxdark">
             <div className="flex items-center gap-2">
               <BsFillBagCheckFill className="w-5 h-5" />
               <h3 className="text-lg font-bold">Pro</h3>
             </div>
+            <hr className="w-full border my-8" />
             <h6 className="font-bold leading-10">Whats Included</h6>
             <p className="flex items-center w-full py-2 text-sm text-gray-500 dark:text-gray-400">
               <i className="flex p-2 justify-center border border-body rounded-full mr-5">
@@ -87,11 +89,12 @@ const Pricing = () => {
               Subscribe
             </button>
           </div>
-          <div className="flex flex-col gap-1 rounded-md shadow-2xl p-5 bg-boxdark">
+          <div className="flex flex-col w-full rounded-md shadow-2xl p-5 bg-boxdark">
             <div className="flex items-center gap-2">
               <BsFillBagCheckFill className="w-5 h-5" />
               <h3 className="text-lg font-bold">Team</h3>
             </div>
+            <hr className="w-full border my-8" />
             <h6 className="font-bold leading-10">Whats Included</h6>
             <p className="flex items-center w-full py-2 text-sm text-gray-500 dark:text-gray-400">
               <i className="flex p-2 justify-center border border-body rounded-full mr-5">
