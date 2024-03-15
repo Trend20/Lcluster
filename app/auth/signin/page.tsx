@@ -13,21 +13,27 @@ const Signin = () => {
 
   console.log("Session: ", session);
 
-  if (session) {
+  if (session.status === "authenticated") {
     return redirect("/profile");
   } else {
-    console.log("not found");
+    console.log("not authenticated");
   }
   return (
-    <div className="mt-30 flex flex-col w-full justify-center items-center lg:col-span-2">
+    <div className="mt-30 py-20 flex flex-col w-full justify-center items-center">
       <div className="w-1/4 justify-center items-center flex flex-col">
-        <button className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center">
+        <button
+          onClick={() => signIn("google")}
+          className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center"
+        >
           <i className="mr-8">
             <FcGoogle size={25} />
           </i>
           Sign in with Google
         </button>
-        <button className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center">
+        <button
+          onClick={() => signIn("github")}
+          className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center"
+        >
           <i className="mr-8">
             <FaGithub size={25} />
           </i>
