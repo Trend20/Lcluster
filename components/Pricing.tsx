@@ -6,6 +6,7 @@ const pricingData = [
   {
     id: 1,
     icon: <BsFillBagCheckFill className="w-5 h-5" />,
+    desc: "Get started free on unlocking your productivity by saving time looking for 3rd party libraries.",
     package: "Free",
     value: "$0",
     priceTag: "Free forever",
@@ -21,6 +22,7 @@ const pricingData = [
     id: 2,
     icon: <BsFillBagCheckFill className="w-5 h-5" />,
     package: "Pro",
+    desc: "Gain access to unlimited 3rd party libraries and get on speed with your development process to meet customer needs",
     value: "$5",
     priceTag: "Billed Yearly",
     listIcon: <BsFillBookmarkCheckFill fill="#4ccd99" />,
@@ -35,6 +37,7 @@ const pricingData = [
     id: 3,
     icon: <BsFillBagCheckFill className="w-5 h-5" />,
     package: "Team",
+    desc: "Get your team on speed by providing them with a wide range of libraries to choose from to help them ship faster.",
     value: "$20",
     priceTag: "Billed Yearly",
     listIcon: <BsFillBookmarkCheckFill fill="#4ccd99" />,
@@ -71,10 +74,18 @@ const Pricing = () => {
                 price.id === 2 ? "border-2 border-teal" : ""
               }`}
             >
-              <div className="flex items-center gap-2">
-                {price.icon}
-                <h3 className="text-lg font-bold">{price.package}</h3>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  {price.icon}
+                  <h3 className="text-lg font-bold">{price.package}</h3>
+                </div>
+                {price.id === 2 && (
+                  <p className="items-center font-semibold bg-teal p-1 w-32 justify-center flex rounded-full">
+                    Popular
+                  </p>
+                )}
               </div>
+              <p className="mt-5 py-3">{price.desc}</p>
               <hr className="w-full border my-8" />
 
               <div className="flex flex-col">
