@@ -2,6 +2,25 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { HeaderLinks } from "@/types/header";
+
+const headerData: HeaderLinks[] = [
+  {
+    id: 1,
+    url: "#features",
+    name: "features",
+  },
+  {
+    id: 1,
+    url: "#pricing",
+    name: "pricing",
+  },
+  {
+    id: 1,
+    url: "#contact",
+    name: "contact",
+  },
+];
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -38,15 +57,15 @@ const Header = () => {
         </div>
         <div className="md:flex w-1/4 flex justify-center items-center">
           <nav className="flex items-center space-x-10">
-            <Link className="text-normal font-medium" href="#features">
-              Features
-            </Link>
-            <Link className="text-normal font-medium" href="#pricing">
-              Pricing
-            </Link>
-            <Link className="text-normal font-medium" href="#contact">
-              Contact
-            </Link>
+            {headerData.map((item: any) => (
+              <Link
+                key={item.id}
+                className="text-normal capitalize font-medium"
+                href={item.url}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
         </div>
         <div className="w-1/4 flex justify-end items-center">

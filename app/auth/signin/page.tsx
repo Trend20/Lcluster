@@ -1,10 +1,23 @@
+"use client";
+
+import { signIn, useSession } from "next-auth/react";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 const Signin = () => {
+  const session = useSession();
+
+  console.log("Session: ", session);
+
+  if (session) {
+    return redirect("/profile");
+  } else {
+    console.log("not found");
+  }
   return (
     <div className="mt-30 flex flex-col w-full justify-center items-center lg:col-span-2">
       <div className="w-1/4 justify-center items-center flex flex-col">

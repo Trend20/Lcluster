@@ -4,6 +4,37 @@ import { LuFileCode } from "react-icons/lu";
 import { GoShare } from "react-icons/go";
 import { CgInsights } from "react-icons/cg";
 
+const productDetails = [
+  {
+    id: 1,
+    icon: <MdAccessTime size={25} />,
+    title: "Time-saving Efficiency",
+    description:
+      "Our application streamlines the process of finding and integrating third-party libraries, saving developers valuable time.",
+  },
+  {
+    id: 2,
+    icon: <LuFileCode size={25} />,
+    title: "Enhanced Code Quality",
+    description:
+      "Our platform ensures that teams can maintain high code quality standards by minimizing the risk of using outdated or unsupported dependencies.",
+  },
+  {
+    id: 3,
+    icon: <GoShare size={25} />,
+    title: "Collaboration and Knowledge Sharing",
+    description:
+      "Our application fosters collaboration and knowledge sharing within development teams by enabling developers to share their experiences and insights about specific libraries.",
+  },
+  {
+    id: 4,
+    icon: <CgInsights size={25} />,
+    title: "Reliable Library Insights",
+    description:
+      "Our platform provides developers with reliable insights into the quality and reliability of third-party libraries that align with their requirements.",
+  },
+];
+
 const ProductPitch = () => {
   return (
     <section className="w-full justify-center items-center flex py-12 mt-20 px-36 md:py-24 lg:py-32 xl:py-40">
@@ -19,52 +50,20 @@ const ProductPitch = () => {
         </div>
         <div className="flex justify-center items-center w-3/4 mt-10">
           <div className="grid gap-6 lg:grid-cols-2">
-            <div className="flex flex-col space-y-2 shadow-2xl p-8 bg-boxdark">
-              <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
-                <MdAccessTime size={25} />
-              </i>
-              <h2 className="text-lg font-bold">Time-saving Efficiency</h2>
-              <p className="text-gray-500 dark:text-gray-400">
-                Our application streamlines the process of finding and
-                integrating third-party libraries, saving developers valuable
-                time.
-              </p>
-            </div>
-            <div className="space-y-2 flex flex-col shadow-2xl p-8 bg-boxdark">
-              <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
-                <LuFileCode size={25} />
-              </i>
-              <h2 className="text-lg font-bold">Enhanced Code Quality</h2>
-              <p className="text-gray-500 dark:text-gray-400">
-                Our platform ensures that teams can maintain high code quality
-                standards by minimizing the risk of using outdated or
-                unsupported dependencies.
-              </p>
-            </div>
-            <div className="space-y-2 flex flex-col shadow-2xl p-8 bg-boxdark">
-              <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
-                <GoShare size={25} />
-              </i>
-              <h2 className="text-lg font-bold">
-                Collaboration and Knowledge Sharing
-              </h2>
-              <p className="text-gray-500 dark:text-gray-400">
-                Our application fosters collaboration and knowledge sharing
-                within development teams by enabling developers to share their
-                experiences and insights about specific libraries.
-              </p>
-            </div>
-            <div className="space-y-2 flex flex-col shadow-2xl p-8 bg-boxdark">
-              <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
-                <CgInsights size={25} />
-              </i>
-              <h5 className="text-lg font-bold">Reliable Library Insights</h5>
-              <p className="text-gray-500 dark:text-gray-400">
-                Our platform provides developers with reliable insights into the
-                quality and reliability of third-party libraries that align with
-                their requirements.
-              </p>
-            </div>
+            {productDetails.map((info: any) => (
+              <div
+                key={info.id}
+                className="flex flex-col space-y-2 shadow-2xl p-8 bg-boxdark"
+              >
+                <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
+                  {info.icon}
+                </i>
+                <h2 className="text-lg font-bold">{info.title}</h2>
+                <p className="text-gray-500 dark:text-gray-400">
+                 {info.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
