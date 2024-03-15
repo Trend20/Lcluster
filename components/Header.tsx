@@ -95,13 +95,13 @@ const Header = () => {
               className="flex items-center cursor-pointer"
               onClick={() => setShowDiv((prev) => !prev)}
             >
-              <Image
+              {/* <Image
                 src={session.user?.image}
                 alt="Avatar"
                 width="100"
                 height="100"
                 className="flex rounded-full w-10.5 h-10.5"
-              />
+              /> */}
               <i className="px-3">
                 <LiaCaretDownSolid />
               </i>
