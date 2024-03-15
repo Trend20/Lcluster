@@ -67,7 +67,9 @@ const Pricing = () => {
           {pricingData.map((price) => (
             <div
               key={price.id}
-              className="flex flex-col w-[360px] rounded-md shadow-2xl p-5 bg-boxdark"
+              className={`flex flex-col w-[360px] rounded-md shadow-2xl p-5 bg-boxdark ${
+                price.id === 2 ? "border-2 border-teal" : ""
+              }`}
             >
               <div className="flex items-center gap-2">
                 {price.icon}
