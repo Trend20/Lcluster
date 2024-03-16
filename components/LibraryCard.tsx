@@ -7,23 +7,23 @@ const LibraryCard = ({ library }: any) => {
   const [showTopics, setShowTopics] = useState<boolean>(false);
   return (
     <div
-      className={`flex flex-col rounded-md border cursor-pointer border-grey`}
+      className={`flex flex-col rounded-md border cursor-pointer border-teal`}
     >
       <div className="flex p-3 items-center justify-between">
         <h3 className="font-bold flex border-none">{library.package.name}</h3>
         <Link href={library.package.links.npm} target="_blank">
-          <FiExternalLink color="#0394fc" />
+          <FiExternalLink color="#4ccd99" />
         </Link>
       </div>
-      <hr className="border-grey" />
+      <hr className="border" />
       <div className="flex p-3 items-center">
         <p>{library.package.description}</p>
       </div>
-      <hr className="border-grey" />
+      <hr className="border" />
       <div className="flex p-3 items-center justify-between">
         <p>Version:</p> <p>{library.package.version}</p>
       </div>
-      <hr className="border-grey" />
+      <hr className="border" />
       <div className="flex items-center relative">
         <span
           className="flex p-3 items-center justify-between w-full"
@@ -33,7 +33,7 @@ const LibraryCard = ({ library }: any) => {
           <p>
             {" "}
             <i>
-              {showTopics ? <GrCaretUp color="#0394fc" /> : <GrCaretDown />}
+              {showTopics ? <GrCaretUp color="#4ccd99" /> : <GrCaretDown />}
             </i>
           </p>
         </span>
@@ -46,7 +46,7 @@ const LibraryCard = ({ library }: any) => {
             (topic: any, index: React.Key | null | undefined) => (
               <p
                 key={index}
-                className="flex justify-center items-center text-sm p-1 bg-meta-5 rounded-full"
+                className="flex justify-center items-center text-sm p-1 bg-teal rounded-full"
               >
                 {topic}
               </p>
@@ -54,13 +54,13 @@ const LibraryCard = ({ library }: any) => {
           )}
         </div>
       </div>
-      <hr className="border-grey" />
+      <hr className="border" />
 
       <div className="flex py-8">
         <Link
           href={library.package.links.npm}
           target="_blank"
-          className="flex justify-center items-center border border-meta-5 text-meta-5 rounded-md p-3 w-3/4 m-auto hover:bg-meta-5 hover:text-whiten"
+          className="flex justify-center items-center border border-teal text-teal rounded-md p-3 w-3/4 m-auto hover:bg-teal hover:text-whiten"
         >
           Explore Package
         </Link>

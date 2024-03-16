@@ -1,5 +1,7 @@
 "use client";
 import LibraryCard from "@/components/LibraryCard";
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const javascriptOptions = [
@@ -83,6 +85,26 @@ const javascriptOptions = [
     name: "middleware",
     value: "middleware",
   },
+  {
+    id: 16,
+    name: "react",
+    value: "react",
+  },
+  {
+    id: 17,
+    name: "vue",
+    value: "vue",
+  },
+  {
+    id: 18,
+    name: "angular",
+    value: "angular",
+  },
+  {
+    id: 19,
+    name: "testing",
+    value: "testing",
+  },
 ];
 
 const Javascript = () => {
@@ -90,6 +112,7 @@ const Javascript = () => {
   const [selectedLibs, setSelectedLibs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const { data: session } = useSession();
 
   useEffect(() => {
     async function getSelectedLibs() {
@@ -119,11 +142,14 @@ const Javascript = () => {
     setSelectedOption(event.target.value);
   };
 
+  if (!session) {
+    return redirect("/auth/signin");
+  }
+
   return (
-    <div className="flex flex-col w-full px-50 py-40">
-      <h3>
-        Find Javascript Libraries based on the functionality you are
-        Implementing
+    <div className="flex flex-col w-full px-50 py-40 justify-center items-center">
+      <h3 className="font-bold text-2xl">
+        Find Javascript Libraries based on your requirement.
       </h3>
       <div className="flex items-center mt-8">
         <h1>Javascript</h1>
@@ -131,7 +157,7 @@ const Javascript = () => {
           <select
             value={selectedOption}
             onChange={handleSelectChange}
-            className="flex outline-none rounded-md p-3 border border-grey"
+            className="flex outline-none rounded-md p-3 border-2"
           >
             {javascriptOptions.map((item) => (
               <option key={item.id} value={item.value}>
@@ -141,7 +167,7 @@ const Javascript = () => {
           </select>
         </div>
       </div>
-      <div className="grid w-full grid-cols-4 gap-8 py-10">
+      <div className="grid w-full grid-cols-3 gap-8 py-10">
         {selectedLibs.map((lib: any) => (
           <LibraryCard key={lib.name} library={lib} />
         ))}

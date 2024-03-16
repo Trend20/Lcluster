@@ -1,7 +1,8 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
 
 const tech = [
   {
@@ -36,8 +37,11 @@ const tech = [
   },
 ];
 
-const Libraries = () => {
-  const [selectedTech, setSelectedTech] = useState("paginate");
+const Libraries = async () => {
+  const session = await getServerSession();
+  if (!session) {
+    return redirect("/auth/signin");
+  }
   return (
     <div className="flex w-full flex-col justify-center items-center px-50 py-30 mt-40">
       <div className="flex justify-center items-center">
