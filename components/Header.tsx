@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { HeaderLinks } from "@/types/header";
 import { useSession, signOut } from "next-auth/react";
-import { redirect } from "next/navigation";
-import { FaRegUser } from "react-icons/fa6";
-import { LiaCaretDownSolid } from "react-icons/lia";
+// import { redirect } from "next/navigation";
+// import { FaRegUser } from "react-icons/fa6";
+// import { LiaCaretDownSolid } from "react-icons/lia";
 import { TbLogout } from "react-icons/tb";
 
 const headerData: HeaderLinks[] = [
@@ -21,9 +21,19 @@ const headerData: HeaderLinks[] = [
     name: "pricing",
   },
   {
+    id: 2,
+    url: "/libraries",
+    name: "libraries",
+  },
+  {
     id: 3,
+    url: "/profile",
+    name: "collection",
+  },
+  {
+    id: 4,
     url: "#contact",
-    name: "contact",
+    name: "contact us",
   },
 ];
 
@@ -44,9 +54,7 @@ const Header = () => {
   }, []);
 
   const { data: session } = useSession();
-  if (!session) {
-    if (session) return redirect("/explore");
-  }
+  console.log(session);
 
   const isScrolled = scrollY > 0;
   return (
@@ -67,7 +75,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div className="md:flex w-1/4 flex justify-center items-center">
+        <div className="w-1/2 flex justify-center items-center">
           <nav className="flex items-center space-x-10">
             {headerData.map((item: any) => (
               <Link
@@ -84,53 +92,22 @@ const Header = () => {
           <div className="w-1/4 flex justify-end items-center">
             <Link
               href={"/auth/signin"}
-              className="flex justify-center items-center w-36 bg-teal p-3 rounded-md outline-none"
+              className="flex justify-center items-center w-36 font-medium bg-teal p-3 rounded-md outline-none"
             >
               Try for Free
             </Link>
           </div>
         ) : (
-          <div className="flex cursor-pointer flex-col">
-            <div
-              className="flex items-center cursor-pointer"
-              onClick={() => setShowDiv((prev) => !prev)}
+          <div className="w-1/4 flex justify-end items-center">
+            <button
+              onClick={() => signOut({ redirect: true })}
+              className="flex items-center w-36 p-3 border rounded mt-5"
             >
-              {/* <Image
-                src={session.user?.image}
-                alt="Avatar"
-                width="100"
-                height="100"
-                className="flex rounded-full w-10.5 h-10.5"
-              /> */}
-              <i className="px-3">
-                <LiaCaretDownSolid />
+              <i className="mr-3">
+                <TbLogout size={25} />
               </i>
-            </div>
-            {showDiv ? (
-              <div className="flex flex-col absolute bg-blue-gray-50 top-20 px-3 py-5 h-25.5 rounded-md items-start- justify-start">
-                <Link
-                  href="/profile"
-                  prefetch={false}
-                  className="flex items-center rounded-md p-1 hover:bg-meta-4 hover:text-whiten"
-                >
-                  <i className="mr-3">
-                    <FaRegUser />
-                  </i>
-                  {session.user?.name}
-                </Link>
-                <button
-                  onClick={() => signOut({ redirect: true })}
-                  className="flex items-center p-1 rounded mt-5 hover:bg-meta-4 hover:text-whiten"
-                >
-                  <i className="mr-3">
-                    <TbLogout />
-                  </i>
-                  Logout
-                </button>
-              </div>
-            ) : (
-              ""
-            )}
+              Logout
+            </button>
           </div>
         )}
       </div>

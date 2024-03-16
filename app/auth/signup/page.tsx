@@ -12,13 +12,13 @@ const Signup = () => {
           <i className="mr-8">
             <FcGoogle size={25} />
           </i>
-          Sign in with Google
+          Sign up with Google
         </button>
         <button className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center">
           <i className="mr-8">
             <FaGithub size={25} />
           </i>
-          Sign in with GitHub
+          Sign up with GitHub
         </button>
       </div>
       <div className="flex items-center w-1/4 my-10">
