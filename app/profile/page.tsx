@@ -40,6 +40,13 @@ const Profile = async () => {
                 <h6 className="text-lg">
                   You don&#39;t have any collection yet!
                 </h6>
+                <Image
+                  src="icons/col.svg"
+                  alt="Avatar"
+                  width="100"
+                  height="100"
+                  className="rounded-full py-8"
+                />
                 <Link
                   href="/libraries"
                   className="flex justify-center font-semibold items-center w-40 bg-teal mt-3 p-3 rounded-md outline-none"
