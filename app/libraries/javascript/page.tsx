@@ -120,7 +120,7 @@ const Javascript = () => {
   };
 
   return (
-    <div className="flex flex-col w-full px-40 py-40">
+    <div className="flex flex-col w-full px-50 py-40">
       <h3>
         Find Javascript Libraries based on the functionality you are
         Implementing
