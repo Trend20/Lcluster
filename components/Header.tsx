@@ -22,12 +22,12 @@ const headerData: HeaderLinks[] = [
   },
   {
     id: 2,
-    url: "#libraries",
+    url: "/libraries",
     name: "libraries",
   },
   {
     id: 3,
-    url: "#collection",
+    url: "/profile",
     name: "collection",
   },
   {
@@ -75,7 +75,7 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div className="md:flex w-1/2 flex justify-center items-center">
+        <div className="w-1/2 flex justify-center items-center">
           <nav className="flex items-center space-x-10">
             {headerData.map((item: any) => (
               <Link
@@ -98,7 +98,7 @@ const Header = () => {
             </Link>
           </div>
         ) : (
-          <div className="flex cursor-pointer flex-col">
+          <div className="flex cursor-pointer flex-col w-1/4 justify-end items-center">
             <div
               className="flex items-center cursor-pointer"
               onClick={() => setShowDiv((prev) => !prev)}
