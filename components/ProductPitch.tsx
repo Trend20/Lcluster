@@ -60,7 +60,7 @@ const ProductPitch = () => {
                 </i>
                 <h2 className="text-lg font-bold">{info.title}</h2>
                 <p className="text-gray-500 dark:text-gray-400">
-                 {info.description}
+                  {info.description}
                 </p>
               </div>
             ))}
