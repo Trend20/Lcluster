@@ -1,5 +1,6 @@
 "use client";
 import LibraryCard from "@/components/LibraryCard";
+import Search from "@/components/Search";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -114,6 +115,12 @@ const Javascript = () => {
   const [error, setError] = useState(null);
   const { data: session } = useSession();
 
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
+
   useEffect(() => {
     async function getSelectedLibs() {
       try {
@@ -136,6 +143,12 @@ const Javascript = () => {
     getSelectedLibs();
   }, [selectedOption]);
 
+  console.log(selectedLibs);
+
+  // const filteredRepos = selectedLibs.filter((lib: any) =>
+  //   lib.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
+
   const handleSelectChange = (event: {
     target: { value: React.SetStateAction<string> };
   }) => {
@@ -151,20 +164,26 @@ const Javascript = () => {
       <h3 className="font-bold text-2xl">
         Find Javascript Libraries based on your requirement.
       </h3>
-      <div className="flex items-center mt-8">
+      <div className="flex items-center mt-8 w-full">
         <h1>Javascript</h1>
-        <div className="flex ml-5">
-          <select
-            value={selectedOption}
-            onChange={handleSelectChange}
-            className="flex outline-none rounded-md p-3 border-2"
-          >
-            {javascriptOptions.map((item) => (
-              <option key={item.id} value={item.value}>
-                {item.name}
-              </option>
-            ))}
-          </select>
+        <div className="flex w-full justify-between items-center">
+          <div className="flex ml-5 w-1/4">
+            <select
+              value={selectedOption}
+              onChange={handleSelectChange}
+              className="flex outline-none rounded-md p-3 border bg-transparent"
+            >
+              <option value="default">Default</option>
+              {javascriptOptions.map((item) => (
+                <option key={item.id} value={item.value}>
+                  {item.name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="flex w-1/2 justify-end items-center">
+            <Search value={searchQuery} onChange={handleSearchChange} />
+          </div>
         </div>
       </div>
       <div className="grid w-full grid-cols-3 gap-8 py-10">

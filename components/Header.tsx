@@ -92,7 +92,7 @@ const Header = () => {
           <div className="w-1/4 flex justify-end items-center">
             <Link
               href={"/auth/signin"}
-              className="flex justify-center items-center w-36 bg-teal p-3 rounded-md outline-none"
+              className="flex justify-center items-center w-36 font-medium bg-teal p-3 rounded-md outline-none"
             >
               Try for Free
             </Link>
