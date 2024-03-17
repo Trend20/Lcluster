@@ -1,12 +1,10 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import { GrCaretUp, GrCaretDown } from "react-icons/gr";
+import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FaNpm } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 
 const LibraryCard = ({ library }: any) => {
-  const [showTopics, setShowTopics] = useState<boolean>(false);
   return (
     <div
       className={`flex flex-col rounded-md shadow-2xl cursor-pointer bg-boxdark`}
@@ -42,7 +40,7 @@ const LibraryCard = ({ library }: any) => {
       <div className="flex px-3 items-center">
         <p className="text-lg">{library.package.description}</p>
       </div>
-      <div className="flex items-center relative">
+      <div className="flex items-center py-3">
         <div className={`p-3 rounded-md flex w-full flex-wrap space-x-2`}>
           {library.package.keywords
             .slice(1, 5)
