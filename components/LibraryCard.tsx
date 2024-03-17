@@ -64,13 +64,6 @@ const LibraryCard = ({ library }: any) => {
         >
           Demo
         </Link>
-        <Link
-          href={library.package.links.npm}
-          target="_blank"
-          className="flex justify-center items-center border border-teal text-teal rounded-md p-3 w-3/4 m-auto"
-        >
-          Try Now
-        </Link>
       </div>
     </div>
   );
