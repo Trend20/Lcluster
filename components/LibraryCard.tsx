@@ -7,7 +7,7 @@ import { CiGlobe } from "react-icons/ci";
 const LibraryCard = ({ library }: any) => {
   return (
     <div
-      className={`flex flex-col rounded-md shadow-2xl cursor-pointer bg-boxdark`}
+      className={`flex flex-col rounded-md shadow-2xl cursor-pointer bg-boxdark p-5`}
     >
       <div className="flex p-3 items-center justify-between w-full">
         <div className="flex w-3/4">
@@ -54,6 +54,9 @@ const LibraryCard = ({ library }: any) => {
             ))}
         </div>
       </div>
+      <button className="flex justify-start items-center ml-3 px-3 py-2 font-medium bg-teal w-40">
+        Add To collection
+      </button>
     </div>
   );
 };
