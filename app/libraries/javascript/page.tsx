@@ -165,7 +165,6 @@ const Javascript = () => {
         Find Javascript Libraries based on your requirement.
       </h3>
       <div className="flex items-center mt-8 w-full">
-        <h1>Javascript</h1>
         <div className="flex w-full justify-between items-center">
           <div className="flex ml-5 w-1/4">
             <select
@@ -181,12 +180,12 @@ const Javascript = () => {
               ))}
             </select>
           </div>
-          <div className="flex w-1/2 justify-end items-center">
+          <div className="flex w-1/4 justify-end items-center">
             <Search value={searchQuery} onChange={handleSearchChange} />
           </div>
         </div>
       </div>
-      <div className="grid w-full grid-cols-3 gap-8 py-10">
+      <div className="grid w-full grid-cols-2 gap-8 py-10">
         {selectedLibs.map((lib: any) => (
           <LibraryCard key={lib.name} library={lib} />
         ))}
