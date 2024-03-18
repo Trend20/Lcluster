@@ -26,6 +26,9 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
             })),
           },
         },
+        include: {
+          libraries: true,
+        },
       });
       console.log("Collection saved:", newCollection);
       setName("");
@@ -35,11 +38,6 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
       console.error("Error saving collection:", error);
     }
   };
-
-  // ,
-  //       include: {
-  //         libraries: true,
-  //       },
   return (
     <>
       <Dialog open={open} size="xs" handler={handleOpen} className="p-5">
