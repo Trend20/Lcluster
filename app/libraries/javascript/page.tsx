@@ -162,11 +162,12 @@ const Javascript = () => {
   return (
     <div className="flex flex-col w-full px-50 py-40 justify-center items-center">
       <h3 className="font-bold text-2xl">
-        Find Javascript Libraries based on your requirement.
+        Find Javascript Libraries based on your project feature.
       </h3>
       <div className="flex items-center mt-8 w-full">
-        <div className="flex w-full justify-between items-center">
-          <div className="flex ml-5 w-1/4">
+        <div className="flex w-full justify-between items-start">
+          <div className="flex ml-5 w-1/4 flex-col">
+            <label htmlFor="">Select Feature</label>
             <select
               value={selectedOption}
               onChange={handleSelectChange}

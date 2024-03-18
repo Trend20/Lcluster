@@ -29,7 +29,7 @@ const Profile = async () => {
             <div className="flex w-full justify-between items-center">
               <h5 className="text-xl font-semibold">My Collections</h5>
               <Link
-                href="/libraries"
+                href="/libraries/javascript"
                 className="flex justify-center font-semibold items-center w-40 bg-teal p-3 rounded-md outline-none"
               >
                 Create Collection
@@ -48,7 +48,7 @@ const Profile = async () => {
                   className="rounded-full py-8"
                 />
                 <Link
-                  href="/libraries"
+                  href="/libraries/javascript"
                   className="flex justify-center font-semibold items-center w-40 bg-teal mt-3 p-3 rounded-md outline-none"
                 >
                   Add Collection

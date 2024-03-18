@@ -4,9 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { HeaderLinks } from "@/types/header";
 import { useSession, signOut } from "next-auth/react";
-// import { redirect } from "next/navigation";
-// import { FaRegUser } from "react-icons/fa6";
-// import { LiaCaretDownSolid } from "react-icons/lia";
 import { TbLogout } from "react-icons/tb";
 
 const headerData: HeaderLinks[] = [
@@ -22,7 +19,7 @@ const headerData: HeaderLinks[] = [
   },
   {
     id: 2,
-    url: "/libraries",
+    url: "/libraries/javascript",
     name: "libraries",
   },
   {
@@ -67,7 +64,7 @@ const Header = () => {
         <div className="flex justify-start w-1/4 items-center">
           <Link className="flex items-center space-x-2" href="/">
             <Image
-              src="/logo1.png"
+              src="/logo2.png"
               alt="logo"
               width="200"
               height="200"
