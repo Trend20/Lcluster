@@ -106,6 +106,11 @@ const javascriptOptions = [
     name: "testing",
     value: "testing",
   },
+  {
+    id: 20,
+    name: "spinner",
+    value: "spinner",
+  },
 ];
 
 const Javascript = () => {
@@ -162,16 +167,18 @@ const Javascript = () => {
   return (
     <div className="flex flex-col w-full px-50 py-40 justify-center items-center">
       <h3 className="font-bold text-2xl">
-        Find Javascript Libraries based on your project feature.
+        Find Javascript Libraries for your project.
       </h3>
       <div className="flex items-center mt-8 w-full">
         <div className="flex w-full justify-between items-start">
           <div className="flex ml-5 w-1/4 flex-col">
-            <label htmlFor="">Select Feature</label>
+            <label htmlFor="" className="flex text-lg font-medium">
+              Select Requirement
+            </label>
             <select
               value={selectedOption}
               onChange={handleSelectChange}
-              className="flex outline-none rounded-md p-3 border bg-transparent"
+              className="flex outline-none w-3/4 mt-3 rounded-md p-3 border bg-transparent"
             >
               <option value="default">Default</option>
               {javascriptOptions.map((item) => (
