@@ -1,11 +1,17 @@
-import { getServerSession } from "next-auth";
+"use client";
+import { AddCollectionDialog } from "@/components/AddCollectionModal";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import React from "react";
 
-const Profile = async () => {
-  const session = await getServerSession();
+const Profile = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => setOpen(!open);
+
+  const { data: session } = useSession();
   if (!session) {
     return redirect("/auth/signin");
   }
@@ -28,12 +34,12 @@ const Profile = async () => {
           <div className="flex flex-col py-10">
             <div className="flex w-full justify-between items-center">
               <h5 className="text-xl font-semibold">My Collections</h5>
-              <Link
-                href="/libraries/javascript"
+              <button
+                onClick={handleOpen}
                 className="flex justify-center font-semibold items-center w-40 bg-teal p-3 rounded-md outline-none"
               >
                 Create Collection
-              </Link>
+              </button>
             </div>
             <div className="flex border h-[500px] rounded-lg mt-10 justify-center items-center">
               <div className="flex flex-col justify-center items-center">
@@ -51,13 +57,14 @@ const Profile = async () => {
                   href="/libraries/javascript"
                   className="flex justify-center font-semibold items-center w-40 bg-teal mt-3 p-3 rounded-md outline-none"
                 >
-                  Add Collection
+                  Add Library
                 </Link>
               </div>
             </div>
           </div>
         </>
       )}
+      <AddCollectionDialog open={open} handleOpen={handleOpen} />
     </div>
   );
 };
