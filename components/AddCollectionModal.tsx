@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import { Dialog } from "@material-tailwind/react";
 import { AiOutlineClose } from "react-icons/ai";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export function AddCollectionDialog({ open, handleOpen }: any) {
   const [name, setName] = useState("");
@@ -10,6 +13,33 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
   const [libraries, setLibraries] = useState([]);
 
   // handle add collection
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+      const newCollection = await prisma.collection.create({
+        data: {
+          title: name,
+          description,
+          libraries: {
+            create: libraries.map((library: any) => ({
+              name: library.name,
+            })),
+          },
+        },
+      });
+      console.log("Collection saved:", newCollection);
+      setName("");
+      setDescription("");
+      handleOpen();
+    } catch (error) {
+      console.error("Error saving collection:", error);
+    }
+  };
+
+  // ,
+  //       include: {
+  //         libraries: true,
+  //       },
   return (
     <>
       <Dialog open={open} size="xs" handler={handleOpen} className="p-5">
@@ -24,7 +54,7 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
             <AiOutlineClose />
           </i>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="flex mt-5">
             <input
               type="text"

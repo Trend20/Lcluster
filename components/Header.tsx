@@ -18,17 +18,17 @@ const headerData: HeaderLinks[] = [
     name: "pricing",
   },
   {
-    id: 2,
+    id: 3,
     url: "/libraries/javascript",
     name: "libraries",
   },
   {
-    id: 3,
+    id: 4,
     url: "/profile",
     name: "collection",
   },
   {
-    id: 4,
+    id: 5,
     url: "#contact",
     name: "contact us",
   },
