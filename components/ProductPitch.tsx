@@ -37,29 +37,29 @@ const productDetails = [
 
 const ProductPitch = () => {
   return (
-    <section className="w-full justify-center items-center flex py-12 mt-20 px-36 md:py-24 lg:py-32 xl:py-40">
-      <div className="w-full justify-center flex flex-col items-center gap-4 px-4 md:px-6">
+    <section className="w-full justify-center items-center flex mt-8 py-8 md:py-12 lg:py-16 xl:py-20 px-4 md:px-6 xl:px-36">
+      <div className="w-full justify-center flex flex-col items-center gap-4">
         <div className="text-center">
-          <h1 className="text-3xl font-semibold tracking-tighter sm:text-5xl md:text-4xl/none">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
             Say Goodbye to Time Wasting.
           </h1>
-          <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 mt-5">
+          <p className="mx-auto max-w-full lg:max-w-[600px] text-gray-500 md:text-base lg:text-lg dark:text-gray-400 mt-4 md:mt-6">
             Discover, integrate, and innovate with the best third-party
             libraries.
           </p>
         </div>
-        <div className="flex justify-center items-center w-3/4 mt-10">
-          <div className="grid gap-6 lg:grid-cols-2">
+        <div className="flex justify-center items-center w-full md:w-3/4 mt-8 md:mt-10">
+          <div className="grid gap-6 lg:grid-cols-2 w-full">
             {productDetails.map((info: any) => (
               <div
                 key={info.id}
-                className="flex flex-col space-y-2 shadow-2xl p-8 bg-boxdark"
+                className="flex flex-col space-y-2 shadow-2xl p-6 lg:p-8 bg-boxdark rounded-lg"
               >
-                <i className="rounded-full bg-teal w-12 h-12 p-3 flex justify-center items-center">
+                <i className="rounded-full bg-teal w-10 h-10 p-2 flex justify-center items-center">
                   {info.icon}
                 </i>
-                <h2 className="text-lg font-bold">{info.title}</h2>
-                <p className="text-gray-500 dark:text-gray-400">
+                <h2 className="text-lg font-semibold">{info.title}</h2>
+                <p className="text-gray-500 dark:text-gray-400 text-sm lg:text-base">
                   {info.description}
                 </p>
               </div>

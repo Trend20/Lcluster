@@ -56,24 +56,24 @@ const Header = () => {
   const isScrolled = scrollY > 0;
   return (
     <div
-      className={`fixed top-0 left-0 w-full px-50 py-3 z-50 ${
+      className={`fixed top-0 left-0 w-full px-4 md:px-8 lg:px-36 py-5 z-50 ${
         isScrolled ? "bg-boxdark shadow-md transition-all duration-300" : ""
       }`}
     >
       <div className="w-full flex justify-between items-center">
-        <div className="flex justify-start w-1/4 items-center">
+        <div className="flex justify-start items-center flex-shrink-0">
           <Link className="flex items-center space-x-2" href="/">
             <Image
               src="/logo2.png"
               alt="logo"
               width="200"
               height="200"
-              className="w-50"
+              className="w-25 md:w-25"
             />
           </Link>
         </div>
-        <div className="w-1/2 flex justify-center items-center">
-          <nav className="flex items-center space-x-10">
+        <div className="flex-grow md:flex-grow-0 flex-shrink-0">
+          <nav className="hidden md:flex items-center space-x-6">
             {headerData.map((item: any) => (
               <Link
                 key={item.id}
@@ -85,28 +85,26 @@ const Header = () => {
             ))}
           </nav>
         </div>
-        {!session ? (
-          <div className="w-1/4 flex justify-end items-center">
+        <div className="flex justify-end items-center flex-shrink-0">
+          {!session ? (
             <Link
               href={"/auth/signin"}
-              className="flex justify-center items-center w-36 font-medium bg-teal p-3 rounded-md outline-none"
+              className="hidden md:flex justify-center items-center font-medium bg-teal p-3 rounded-md outline-none"
             >
               Try for Free
             </Link>
-          </div>
-        ) : (
-          <div className="w-1/4 flex justify-end items-center">
+          ) : (
             <button
               onClick={() => signOut({ redirect: true })}
-              className="flex items-center w-36 p-3 border rounded mt-5"
+              className="hidden md:flex items-center p-3 border rounded"
             >
               <i className="mr-3">
                 <TbLogout size={25} />
               </i>
               Logout
             </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

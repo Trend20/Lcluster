@@ -51,26 +51,29 @@ const pricingData = [
 ];
 const Pricing = () => {
   return (
-    <div className="w-full py-30 mt-20 px-36" id="pricing">
-      <div className="flex flex-col w-full justify-center items-center gap-8 px-4 md:px-6">
+    <div
+      className="w-full py-10 md:py-20 mt-10 md:mt-20 px-4 md:px-6 xl:px-36"
+      id="pricing"
+    >
+      <div className="flex flex-col w-full justify-center items-center gap-4">
         <div className="space-y-2 text-center">
           <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
             Plans that scale
           </div>
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
               Pick the perfect plan
             </h2>
-            <p className="max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            <p className="max-w-full lg:max-w-[700px] text-gray-500 md:text-base lg:text-lg xl:text-xl dark:text-gray-400">
               Start free! Then choose the right plan for you or your team.
             </p>
           </div>
         </div>
-        <div className="grid w-3/4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {pricingData.map((price) => (
             <div
               key={price.id}
-              className={`flex flex-col w-[360px] rounded-md shadow-2xl p-5 bg-boxdark ${
+              className={`flex flex-col rounded-md shadow-2xl p-6 w-94 bg-boxdark ${
                 price.id === 2 ? "border-2 border-teal" : ""
               }`}
             >
@@ -80,33 +83,33 @@ const Pricing = () => {
                   <h3 className="text-lg font-bold">{price.package}</h3>
                 </div>
                 {price.id === 2 && (
-                  <p className="items-center font-semibold bg-teal p-1 w-32 justify-center flex rounded-full">
+                  <p className="items-center font-semibold bg-teal p-1 w-24 sm:w-32 justify-center flex rounded-full">
                     Popular
                   </p>
                 )}
               </div>
-              <p className="mt-5 py-3">{price.desc}</p>
-              <hr className="w-full border my-8" />
+              <p className="mt-4">{price.desc}</p>
+              <hr className="w-full border my-6" />
 
               <div className="flex flex-col">
-                <h1 className="text-5xl font-extrabold leading-10">
+                <h1 className="text-4xl md:text-5xl font-extrabold leading-10">
                   {price.value}
                 </h1>
-                <p className="mt-3">{price.priceTag}</p>
+                <p className="mt-2 md:mt-3">{price.priceTag}</p>
               </div>
-              <h6 className="font-bold leading-10 mt-5">Whats Included</h6>
+              <h6 className="font-bold leading-6 mt-5">Whats Included</h6>
               {price.priceFeatures.map((item, index) => (
                 <p
                   key={index}
-                  className="flex items-center w-full py-2 text-sm text-gray-500 dark:text-gray-400"
+                  className="flex items-center w-full py-1 text-sm text-gray-500 dark:text-gray-400"
                 >
-                  <i className="flex p-2 justify-center border border-body rounded-full mr-5">
+                  <i className="flex items-center justify-center p-2 border border-body rounded-full mr-3">
                     {price.listIcon}
                   </i>
                   {item}
                 </p>
               ))}
-              <button className="p-3 mt-8 bg-teal rounded-md outline-none">
+              <button className="p-3 mt-6 bg-teal rounded-md outline-none">
                 {price.buttonText}
               </button>
             </div>

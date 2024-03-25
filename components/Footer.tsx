@@ -42,12 +42,12 @@ const FooterLinks = [
 
 const Footer = () => {
   return (
-    <div className="w-full py-10 px-36 flex items-center justify-center gap-4 text-center md:flex-row md:gap-6">
+    <div className="w-full py-6 md:py-10 px-4 md:px-8 lg:px-36 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 md:gap-6 text-center">
       <div className="flex items-center justify-center gap-4">
         {FooterIcons.map((icon) => (
           <Link
             key={icon.id}
-            className="rounded-full border border-gray-200 border-gray-200 hover:border-gray-800/90 dark:border-gray-800 dark:hover:border-gray-200 bg-gray-50 w-8 h-8 flex items-center justify-center overflow-hidden"
+            className="rounded-full border border-gray-200 hover:border-gray-800/90 dark:border-gray-800 dark:hover:border-gray-200 bg-gray-50 w-8 h-8 flex items-center justify-center overflow-hidden"
             href="#"
           >
             {icon.icon}
@@ -55,11 +55,11 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-      <nav className="flex flex-col gap-1 md:flex-row md:gap-4">
+      <nav className="flex space-x-5 md:flex-row gap-1 md:gap-4">
         {FooterLinks.map((item) => (
           <Link
             key={item.id}
-            className="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+            className="text-xs md:text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
             href={item.url}
           >
             {item.name}
