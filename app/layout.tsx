@@ -3,6 +3,8 @@ import "../styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NextAuthProvider } from "./providers";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "CodeCrony",
@@ -24,6 +26,8 @@ export default function RootLayout({
             <Footer />
           </div>
         </NextAuthProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
