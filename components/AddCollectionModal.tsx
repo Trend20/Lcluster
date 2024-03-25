@@ -41,7 +41,17 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
 
   return (
     <>
-      <Dialog open={open} size="xs" handler={handleOpen} className="p-5">
+      <Dialog
+        placeholder={""}
+        open={open}
+        size="xs"
+        handler={handleOpen}
+        animate={{
+          mount: { scale: 1, y: 0 },
+          unmount: { scale: 0.9, y: -100 },
+        }}
+        className="p-5"
+      >
         <div className="flex items-center justify-between">
           <h3 className="flex flex-col items-start font-bold">
             New collection
