@@ -10,7 +10,7 @@ const Spotlight = () => {
             The platform for rapid progress. Trusted by engineers from:
           </p>
         </div>
-        <div className="flex items-center justify-center gap-4 md:gap-8 flex-wrap">
+        <div className="flex items-center justify-center w-full">
           <div>
             <Image src="logo1.svg" alt="logo" width="80" height="80" />
           </div>

@@ -64,7 +64,7 @@ const Header = () => {
         <div className="flex justify-start items-center flex-shrink-0">
           <Link className="flex items-center space-x-2" href="/">
             <Image
-              src="/logo2.png"
+              src="/logo3.png"
               alt="logo"
               width="200"
               height="200"

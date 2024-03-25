@@ -52,7 +52,7 @@ const pricingData = [
 const Pricing = () => {
   return (
     <div
-      className="w-full py-10 md:py-20 mt-10 md:mt-20 px-4 md:px-6 xl:px-36"
+      className="w-full py-6 md:py-10 mt-6 md:mt-12 px-4 md:px-6 xl:px-36"
       id="pricing"
     >
       <div className="flex flex-col w-full justify-center items-center gap-4">
@@ -61,26 +61,28 @@ const Pricing = () => {
             Plans that scale
           </div>
           <div className="space-y-2">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
+            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight">
               Pick the perfect plan
             </h2>
-            <p className="max-w-full lg:max-w-[700px] text-gray-500 md:text-base lg:text-lg xl:text-xl dark:text-gray-400">
+            <p className="max-w-full lg:max-w-[700px] text-sm md:text-base lg:text-lg xl:text-xl text-gray-500 dark:text-gray-400">
               Start free! Then choose the right plan for you or your team.
             </p>
           </div>
         </div>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid lg:w-3/4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {pricingData.map((price) => (
             <div
               key={price.id}
-              className={`flex flex-col rounded-md shadow-2xl p-6 w-94 bg-boxdark ${
+              className={`flex flex-col rounded-md shadow-2xl p-6 sm:w-full bg-boxdark ${
                 price.id === 2 ? "border-2 border-teal" : ""
               }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   {price.icon}
-                  <h3 className="text-lg font-bold">{price.package}</h3>
+                  <h3 className="text-base md:text-lg lg:text-xl font-bold">
+                    {price.package}
+                  </h3>
                 </div>
                 {price.id === 2 && (
                   <p className="items-center font-semibold bg-teal p-1 w-24 sm:w-32 justify-center flex rounded-full">
@@ -88,20 +90,22 @@ const Pricing = () => {
                   </p>
                 )}
               </div>
-              <p className="mt-4">{price.desc}</p>
-              <hr className="w-full border my-6" />
+              <p className="mt-4 text-sm md:text-base lg:text-lg">
+                {price.desc}
+              </p>
+              <hr className="w-full border my-4" />
 
               <div className="flex flex-col">
-                <h1 className="text-4xl md:text-5xl font-extrabold leading-10">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-10">
                   {price.value}
                 </h1>
                 <p className="mt-2 md:mt-3">{price.priceTag}</p>
               </div>
-              <h6 className="font-bold leading-6 mt-5">Whats Included</h6>
+              <h6 className="font-bold leading-6 mt-4">Whats Included</h6>
               {price.priceFeatures.map((item, index) => (
                 <p
                   key={index}
-                  className="flex items-center w-full py-1 text-sm text-gray-500 dark:text-gray-400"
+                  className="flex items-center w-full py-1 text-xs md:text-sm text-gray-500 dark:text-gray-400"
                 >
                   <i className="flex items-center justify-center p-2 border border-body rounded-full mr-3">
                     {price.listIcon}
@@ -109,7 +113,7 @@ const Pricing = () => {
                   {item}
                 </p>
               ))}
-              <button className="p-3 mt-6 bg-teal rounded-md outline-none">
+              <button className="p-3 mt-4 bg-teal rounded-md outline-none">
                 {price.buttonText}
               </button>
             </div>
