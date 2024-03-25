@@ -13,16 +13,16 @@ const pricingData = [
     listIcon: <BsFillBookmarkCheckFill fill="#4ccd99" />,
     buttonText: "Get Started",
     priceFeatures: [
-      " Start with the essentials",
-      " Start with the essentials",
-      " Start with the essentials",
+      " Limited access to basic libraries.",
+      " Limited monthly searches or downloads",
+      " Community Support",
     ],
   },
   {
     id: 2,
     icon: <BsFillBagCheckFill className="w-5 h-5" />,
     package: "Pro",
-    desc: "Gain access to unlimited 3rd party libraries and get on speed with your development process to meet customer needs",
+    desc: "Gain access to unlimited 3rd party libraries and get on speed with your development process.",
     value: "$5",
     priceTag: "Billed Yearly",
     listIcon: <BsFillBookmarkCheckFill fill="#4ccd99" />,
@@ -77,7 +77,7 @@ const Pricing = () => {
                 price.id === 2 ? "border-2 border-teal" : ""
               }`}
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between py-3">
                 <div className="flex items-center gap-2">
                   {price.icon}
                   <h3 className="text-base md:text-lg lg:text-xl font-bold">
@@ -90,7 +90,7 @@ const Pricing = () => {
                   </p>
                 )}
               </div>
-              <p className="mt-4 text-sm md:text-base lg:text-lg">
+              <p className="mt-6 text-sm md:text-base lg:text-lg">
                 {price.desc}
               </p>
               <hr className="w-full border my-4" />
