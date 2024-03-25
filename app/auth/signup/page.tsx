@@ -6,7 +6,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 const Signup = () => {
   return (
-    <div className="mt-20 md:mt-20 py-10 px-5 md:py-20 flex flex-col md:flex-row w-full justify-center items-center">
+    <div className="mt-20 md:mt-20 py-10 px-5 md:py-20 flex flex-col w-full justify-center items-center">
       <div className="w-full md:w-1/4 justify-center items-center flex flex-col">
         <button className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center">
           <i className="mr-2">

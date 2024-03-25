@@ -19,7 +19,7 @@ const Signin = () => {
     console.log("not authenticated");
   }
   return (
-    <div className="mt-20 md:mt-20 px-5 py-10 md:py-20 flex flex-col md:flex-row w-full justify-center items-center">
+    <div className="flex flex-col w-full justify-center items-center mt-20 md:mt-20 px-5 py-10 md:py-20">
       <div className="w-full md:w-1/4 justify-center items-center flex flex-col">
         <button
           onClick={() => signIn("google")}
