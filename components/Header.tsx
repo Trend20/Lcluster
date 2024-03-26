@@ -5,6 +5,7 @@ import Image from "next/image";
 import { HeaderLinks } from "@/types/header";
 import { useSession, signOut } from "next-auth/react";
 import { TbLogout } from "react-icons/tb";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const headerData: HeaderLinks[] = [
   {
@@ -36,7 +37,8 @@ const headerData: HeaderLinks[] = [
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [showDiv, setShowDiv] = useState<boolean>(false);
+  // Inside your component
+  const [showNavLinks, setShowNavLinks] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,8 +74,16 @@ const Header = () => {
             />
           </Link>
         </div>
-        <div className="flex-grow md:flex-grow-0 flex-shrink-0">
-          <nav className="hidden md:flex items-center space-x-6">
+        <div
+          className={`lg:flex lg:w-3/4 lg:items-center lg:flex-row lg:border-0 lg:bg-transparent lg:relative lg:top-0 lg:justify-between lg:border-none ${
+            showNavLinks
+              ? "flex absolute border-2 px-3  flex-col border-teal bg-meta-4 w-full top-20 left-0"
+              : "hidden"
+          }`}
+        >
+          <nav
+            className={`flex lg:w-1/2 lg:justify-end  lg:bg-transparent w-full rounded-md items-start md:items-center flex-col lg:flex-row space-y-4 md:space-y-0 md:space-x-6 md:border-none py-4 md:py-0`}
+          >
             {headerData.map((item: any) => (
               <Link
                 key={item.id}
@@ -84,26 +94,38 @@ const Header = () => {
               </Link>
             ))}
           </nav>
+          <div className="flex lg:justify-end lg:w-1/4 py-1 items-center flex-shrink-0">
+            {!session ? (
+              <Link
+                href={"/auth/signin"}
+                className="md:flex justify-center lg:items-center font-medium w-36 bg-teal p-3 rounded-md outline-none"
+              >
+                Try for Free
+              </Link>
+            ) : (
+              <button
+                onClick={() => signOut({ redirect: true })}
+                className="hidden md:flex items-center p-3 border rounded"
+              >
+                <i className="mr-3">
+                  <TbLogout size={25} />
+                </i>
+                Logout
+              </button>
+            )}
+          </div>
         </div>
-        <div className="flex justify-end items-center flex-shrink-0">
-          {!session ? (
-            <Link
-              href={"/auth/signin"}
-              className="hidden md:flex justify-center items-center font-medium bg-teal p-3 rounded-md outline-none"
-            >
-              Try for Free
-            </Link>
-          ) : (
-            <button
-              onClick={() => signOut({ redirect: true })}
-              className="hidden md:flex items-center p-3 border rounded"
-            >
-              <i className="mr-3">
-                <TbLogout size={25} />
-              </i>
-              Logout
-            </button>
-          )}
+        <div className="lg:hidden">
+          <button
+            className="block md:hidden focus:outline-none"
+            onClick={() => setShowNavLinks(!showNavLinks)}
+          >
+            {showNavLinks ? (
+              <AiOutlineClose size={24} />
+            ) : (
+              <AiOutlineMenu size={24} />
+            )}
+          </button>
         </div>
       </div>
     </div>
