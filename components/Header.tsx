@@ -6,6 +6,7 @@ import { HeaderLinks } from "@/types/header";
 import { useSession, signOut } from "next-auth/react";
 import { TbLogout } from "react-icons/tb";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { usePathname } from "next/navigation";
 
 const headerData: HeaderLinks[] = [
   {
@@ -36,6 +37,7 @@ const headerData: HeaderLinks[] = [
 ];
 
 const Header = () => {
+  const pathname = usePathname();
   const [scrollY, setScrollY] = useState(0);
   // Inside your component
   const [showNavLinks, setShowNavLinks] = useState(false);

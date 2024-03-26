@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const FooterIcons = [
   {
@@ -41,6 +43,7 @@ const FooterLinks = [
 ];
 
 const Footer = () => {
+  const pathname = usePathname();
   return (
     <div className="w-full py-6 md:py-10 px-4 md:px-8 lg:px-36 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 md:gap-6 text-center">
       <div className="flex items-center justify-center gap-4">
