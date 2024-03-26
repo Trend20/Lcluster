@@ -7,6 +7,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import Image from "next/image";
 
 const Signin = () => {
   const session = useSession();
@@ -20,6 +21,18 @@ const Signin = () => {
   }
   return (
     <div className="flex flex-col w-full justify-center items-center mt-20 md:mt-20 px-5 py-10 md:py-20">
+      <div className="flex items-center just-center flex-col">
+        <Link className="flex items-center space-x-2" href="/">
+          <Image
+            src="/logo3.png"
+            alt="logo"
+            width="200"
+            height="200"
+            className="w-25 md:w-25"
+          />
+        </Link>
+        <h2 className="mt-1 font-bold text-teal">Sign in to Lcluster</h2>
+      </div>
       <div className="w-full md:w-1/4 justify-center items-center flex flex-col">
         <button
           onClick={() => signIn("google")}
