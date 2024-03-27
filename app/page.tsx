@@ -4,8 +4,14 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import ProductPitch from "@/components/ProductPitch";
 import Spotlight from "@/components/Spotlight";
+import { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+
+export const metadata: Metadata = {
+  title: "Edutext",
+  description: "Home Page for Edutext",
+};
 
 export default async function Home() {
   const session = await getServerSession();

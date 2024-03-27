@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function RootLayout({
   children,
@@ -35,6 +36,7 @@ export default function RootLayout({
               {!isLogin && !isRegister && <Header />}
               <main className="min-h-screen">{children}</main>
               {!isLogin && !isRegister && <Footer />}
+              <ScrollToTop />
             </div>
           )}
         </NextAuthProvider>
