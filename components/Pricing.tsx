@@ -24,13 +24,13 @@ const pricingData = [
     package: "Pro",
     desc: "Gain access to unlimited 3rd party libraries and get on speed with your development process.",
     value: "$5",
-    priceTag: "Billed Yearly",
+    priceTag: "Monthly",
     listIcon: <BsFillBookmarkCheckFill fill="#4ccd99" />,
     buttonText: "Subscribe",
     priceFeatures: [
-      " Start with the essentials",
-      " Start with the essentials",
-      " Start with the essentials",
+      " Unlimited access to libraries.",
+      " Unlimited monthly searches.",
+      " 5 Collections",
     ],
   },
   {
@@ -39,13 +39,13 @@ const pricingData = [
     package: "Team",
     desc: "Get your team on speed by providing them with a wide range of libraries to choose from to help them ship faster.",
     value: "$20",
-    priceTag: "Billed Yearly",
+    priceTag: "Monthly",
     listIcon: <BsFillBookmarkCheckFill fill="#4ccd99" />,
     buttonText: "Subscribe",
     priceFeatures: [
-      " Start with the essentials",
-      " Start with the essentials",
-      " Start with the essentials",
+      " Unlimited Collections",
+      " Access to all libraries",
+      " Access to Library Insights",
     ],
   },
 ];
@@ -113,7 +113,13 @@ const Pricing = () => {
                   {item}
                 </p>
               ))}
-              <button className="p-3 mt-4 bg-teal rounded-md outline-none">
+              <button
+                className={`p-3 mt-4 rounded-md outline-none ${
+                  price.id === 2
+                    ? "bg-teal border-0"
+                    : "bg-transparent border-2 border-teal"
+                }`}
+              >
                 {price.buttonText}
               </button>
             </div>
