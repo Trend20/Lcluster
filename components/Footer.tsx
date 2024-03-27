@@ -82,6 +82,16 @@ const Footer = () => {
           ))}
         </nav>
       </div>
+      <div className="flex justify-center text-sm items-center py-3 space-x-2">
+        <p>Crafted by</p>
+        <Link
+          href={"https://github.com/Trend20"}
+          target="_blank"
+          className="hover:text-teal"
+        >
+          Enock Omondi
+        </Link>
+      </div>
     </>
   );
 };
