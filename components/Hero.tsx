@@ -7,7 +7,10 @@ const Hero = () => {
       <div className="flex flex-col gap-4 px-4 md:gap-6 md:px-8">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="text-center flex flex-col justify-center items-center">
-            <h1 className="text-3xl md:text-5xl font-extrabold capitalize w-full md:w-[880px] leading-relaxed">
+            <h1
+              className="text-3xl md:text-5xl font-extrabold capitalize w-full md:w-[880px]"
+              style={{ lineHeight: "1.3" }}
+            >
               Access <span className="text-teal">third-party</span> libraries{" "}
               <span className="text-teal">effortlessly</span>.
             </h1>
