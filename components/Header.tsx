@@ -41,11 +41,11 @@ const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   // Inside your component
   const [showNavLinks, setShowNavLinks] = useState(false);
-  const [showHeaderAndFooter, setShowHeaderAndFooter] = useState(false);
+  const [showHeaderAndFooter, setShowHeaderAndFooter] = useState(true);
 
   const handleShowHeaderAndFooter = () => {
-    if (pathname === "/signin" || pathname === "/signup") {
-      setShowHeaderAndFooter((prev) => !prev);
+    if (pathname === "/auth/signin" || pathname === "/auth/signup") {
+      setShowHeaderAndFooter(false);
     }
   };
 
