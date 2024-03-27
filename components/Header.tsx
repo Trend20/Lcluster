@@ -41,17 +41,11 @@ const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   // Inside your component
   const [showNavLinks, setShowNavLinks] = useState(false);
-  const [showHeaderAndFooter, setShowHeaderAndFooter] = useState(true);
+  const [activeClass, seActiveClass] = useState(false);
 
-  const handleShowHeaderAndFooter = () => {
-    if (pathname === "/auth/signin" || pathname === "/auth/signup") {
-      setShowHeaderAndFooter(false);
-    }
-  };
-
-  useEffect(() => {
-    handleShowHeaderAndFooter();
-  }, []);
+  // const setActive = () =>{
+  //   path
+  // }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,12 +89,13 @@ const Header = () => {
           }`}
         >
           <nav
-            className={`flex lg:w-1/2 lg:justify-end  lg:bg-transparent w-full rounded-md items-start md:items-center flex-col lg:flex-row space-y-4 md:space-y-0 md:space-x-6 md:border-none py-4 md:py-0`}
+            className={`flex lg:w-1/2 lg:justify-end lg:bg-transparent w-full rounded-md items-start md:items-center flex-col lg:flex-row space-y-4 md:space-y-0 md:space-x-6 md:border-none py-4 md:py-0`}
           >
             {headerData.map((item: any) => (
               <Link
+                onClick={() => setShowNavLinks(false)}
                 key={item.id}
-                className="text-normal capitalize font-medium"
+                className={`text-normal capitalize font-medium`}
                 href={item.url}
               >
                 {item.name}
