@@ -3,22 +3,10 @@ import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-// import Image from "next/image";
 
 const Signup = () => {
   return (
     <div className="mt-20 md:mt-20 py-10 px-5 md:py-20 flex flex-col w-full justify-center items-center">
-      {/* <div className="flex items-center just-center flex-col">
-        <Link className="flex items-center space-x-2" href="/">
-          <Image
-            src="/logo3.png"
-            alt="logo"
-            width="200"
-            height="200"
-            className="w-44 md:w-44"
-          />
-        </Link>
-      </div> */}
       <div className="w-full md:w-1/4 justify-center items-center flex flex-col">
         <button className="w-full border mt-5 p-3 rounded-lg flex justify-center items-center">
           <i className="mr-2">
