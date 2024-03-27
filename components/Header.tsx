@@ -118,7 +118,7 @@ const Header = () => {
             ) : (
               <button
                 onClick={() => signOut({ redirect: true })}
-                className="hidden md:flex items-center p-3 border rounded"
+                className="flex items-center p-3 border rounded w-36"
               >
                 <i className="mr-3">
                   <TbLogout size={25} />

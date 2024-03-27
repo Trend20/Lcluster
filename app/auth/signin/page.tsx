@@ -21,7 +21,7 @@ const Signin = () => {
   }
   return (
     <div className="flex flex-col w-full justify-center items-center mt-20 md:mt-20 px-5 py-10 md:py-20">
-      <div className="flex items-center just-center flex-col">
+      {/* <div className="flex items-center just-center flex-col">
         <Link className="flex items-center space-x-2" href="/">
           <Image
             src="/logo3.png"
@@ -31,7 +31,7 @@ const Signin = () => {
             className="w-44 md:w-44"
           />
         </Link>
-      </div>
+      </div> */}
       <div className="w-full md:w-1/4 justify-center items-center flex flex-col">
         <button
           onClick={() => signIn("google")}
