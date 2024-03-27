@@ -3,7 +3,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Signup = () => {
   return (
