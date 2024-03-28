@@ -7,6 +7,7 @@ import { useSession, signOut } from "next-auth/react";
 import { TbLogout } from "react-icons/tb";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 const headerData: HeaderLinks[] = [
   {
@@ -135,6 +136,9 @@ const Header = () => {
             )}
           </button>
         </div>
+        {/* <div className="absolute right-5">
+          <ThemeToggle />
+        </div> */}
       </div>
     </div>
   );
