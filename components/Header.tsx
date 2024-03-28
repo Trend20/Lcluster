@@ -38,15 +38,8 @@ const headerData: HeaderLinks[] = [
 ];
 
 const Header = () => {
-  const pathname = usePathname();
   const [scrollY, setScrollY] = useState(0);
-  // Inside your component
   const [showNavLinks, setShowNavLinks] = useState(false);
-  const [activeClass, seActiveClass] = useState(false);
-
-  // const setActive = () =>{
-  //   path
-  // }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,7 +78,7 @@ const Header = () => {
         <div
           className={`lg:flex lg:w-3/4 lg:items-center lg:flex-row lg:border-0 lg:bg-transparent lg:relative lg:top-0 lg:justify-between lg:border-none ${
             showNavLinks
-              ? "flex absolute border-2 px-3  flex-col border-teal bg-meta-4 w-full top-20 left-0"
+              ? "flex absolute border-2 px-3  flex-col rounded-md border-teal bg-meta-4  top-20 right-5"
               : "hidden"
           }`}
         >
