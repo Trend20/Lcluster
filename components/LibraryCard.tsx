@@ -11,7 +11,7 @@ const LibraryCard = ({ library }: any) => {
     >
       <div className="flex p-3 lg:flex-row lg:items-center justify-between w-full">
         <div className="flex flex-col lg:flex-row w-full lg:w-3/4 md:w-3/4">
-          <h3 className="font-extrabold text-base lg:text-sm sm:text-lg md:text-xl flex border-none">
+          <h3 className="font-extrabold text-base lg:text-medium sm:text-lg md:text-xl flex border-none">
             {library.package.name}
           </h3>
         </div>
@@ -44,7 +44,7 @@ const LibraryCard = ({ library }: any) => {
         </p>
       </div>
       <div className="flex items-center py-2 ml-1">
-        <div className={`p-2 rounded-md flex w-full flex-wrap space-x-2`}>
+        <div className={`p-2 rounded-md flex w-full flex-wrap space-x-2 gap-5`}>
           {library.package.keywords
             .slice(1, 5)
             .map((topic: any, index: React.Key | null | undefined) => (
@@ -57,9 +57,11 @@ const LibraryCard = ({ library }: any) => {
             ))}
         </div>
       </div>
-      <button className="flex justify-start items-center w-40 ml-3 px-3 py-2 font-medium bg-teal md:w-40">
-        Add To Collection
-      </button>
+      <div className="flex py-5">
+        <button className="flex justify-start items-center w-40 ml-3 px-3 py-2 font-medium bg-teal md:w-40">
+          Add To Collection
+        </button>
+      </div>
     </div>
   );
 };

@@ -170,7 +170,7 @@ const Javascript = () => {
         Find Javascript Libraries for your project.
       </h3>
       <div className="flex items-center mt-6 md:mt-8 w-full">
-        <div className="flex w-full flex-col lg:flex-row justify-between items-start">
+        <div className="flex w-full flex-col lg:flex-row justify-between items-start lg:items-center">
           <div className="flex lg:ml-2 md:ml-5 w-full md:w-1/2 flex-col">
             <label htmlFor="" className="flex text-base md:text-lg font-medium">
               Select Requirement
@@ -188,7 +188,7 @@ const Javascript = () => {
               ))}
             </select>
           </div>
-          <div className="flex w-full md:w-1/2 justify-end items-center">
+          <div className="flex w-full md:w-1/2 justify-end items-center lg:mt-13">
             <Search value={searchQuery} onChange={handleSearchChange} />
           </div>
         </div>
