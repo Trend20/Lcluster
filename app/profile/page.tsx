@@ -56,7 +56,7 @@ const Profile = () => {
             </div>
             <div className="flex border h-64 md:h-80 lg:h-96 rounded-lg mt-6 md:mt-8 lg:mt-10 justify-center items-center">
               {collections.length !== 0 ? (
-                <div className="grid lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                   {collections.map((item: any) => (
                     <Link
                       href={`/collections/${item.id}`}

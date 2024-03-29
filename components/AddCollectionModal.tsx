@@ -40,7 +40,6 @@ export function AddCollectionDialog({ open, handleOpen, getCollections }: any) {
   return (
     <>
       <Dialog
-        placeholder={""}
         open={open}
         size="xs"
         handler={handleOpen}
