@@ -3,41 +3,37 @@
 import React, { useState } from "react";
 import { Dialog } from "@material-tailwind/react";
 import { AiOutlineClose } from "react-icons/ai";
-import { PrismaClient } from "@prisma/client";
+// import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
 export function AddCollectionDialog({ open, handleOpen }: any) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [libraries, setLibraries] = useState([]);
+  // const [libraries, setLibraries] = useState([]);
 
   // handle add collection
-  // const handleSubmit = async (e: { preventDefault: () => void }) => {
-  //   e.preventDefault();
-  //   try {
-  //     const newCollection = await prisma.collection.create({
-  //       data: {
-  //         title: name,
-  //         description,
-  //         libraries: {
-  //           create: libraries.map((library: any) => ({
-  //             name: library.name,
-  //           })),
-  //         },
-  //       },
-  //       include: {
-  //         libraries: true,
-  //       },
-  //     });
-  //     console.log("Collection saved:", newCollection);
-  //     setName("");
-  //     setDescription("");
-  //     handleOpen();
-  //   } catch (error) {
-  //     console.error("Error saving collection:", error);
-  //   }
-  // };
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/collections", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, description }),
+      });
+      if (res.ok) {
+        setName("");
+        setDescription("");
+        handleOpen();
+      } else {
+        console.log("collection could not be created");
+      }
+    } catch (error) {
+      console.error("Error saving collection:", error);
+    }
+  };
 
   return (
     <>
@@ -63,7 +59,7 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
             <AiOutlineClose />
           </i>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="flex mt-5">
             <input
               type="text"
@@ -82,15 +78,15 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
               className="p-3 flex border border-grey rounded-md w-full"
             />
           </div>
+          <div className="space-x-2 flex justify-end w-full mt-5">
+            <button
+              className="p-3 flex justify-center items-center bg-teal rounded-md font-semibold w-32"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
         </form>
-        <div className="space-x-2 flex justify-end w-full mt-5">
-          <button
-            className="p-3 flex justify-center items-center bg-teal rounded-md font-semibold w-32"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>
       </Dialog>
     </>
   );
