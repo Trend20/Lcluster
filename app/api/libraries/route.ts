@@ -1,27 +1,20 @@
 import { PrismaClient } from "@prisma/client";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method === "POST") {
-    // Create a new library
-    const { name, collectionId } = req.body;
-    const library = await prisma.library.create({
-      data: {
-        name,
-        collectionId,
-      },
-    });
-    res.status(201).json(library);
-  } else if (req.method === "GET") {
-    // Fetch all libraries
-    const libraries = await prisma.library.findMany();
-    res.status(200).json(libraries);
-  } else {
-    res.status(405).json({ message: "Method Not Allowed" });
-  }
-}
+// creating a collection
+// export async function POST(request: Request) {
+//   try {
+//     const body = await request.json();
+//     const { name } = body;
+//     const library = await prisma.library.create({
+//       data: {
+//         name,
+//       },
+//     });
+//     return NextResponse.json(library, { status: 201 });
+//   } catch (error) {
+//     return NextResponse.json({ message: error }, { status: 500 });
+//   }
+// }
