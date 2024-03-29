@@ -3,14 +3,17 @@
 import React, { useState } from "react";
 import { Dialog } from "@material-tailwind/react";
 import { AiOutlineClose } from "react-icons/ai";
+import { ClipLoader } from "react-spinners";
 
-export function AddCollectionDialog({ open, handleOpen }: any) {
+export function AddCollectionDialog({ open, handleOpen, getCollections }: any) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // handle add collection
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const res = await fetch("/api/collections", {
         method: "POST",
@@ -19,9 +22,11 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
         },
         body: JSON.stringify({ name, description }),
       });
+      setLoading(false);
       if (res.ok) {
         setName("");
         setDescription("");
+        getCollections();
         handleOpen();
       } else {
         console.log("collection could not be created");
@@ -29,6 +34,7 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
     } catch (error) {
       console.error("Error saving collection:", error);
     }
+    setLoading(false);
   };
 
   return (
@@ -79,7 +85,7 @@ export function AddCollectionDialog({ open, handleOpen }: any) {
               className="p-3 flex justify-center items-center bg-teal rounded-md font-semibold w-32"
               type="submit"
             >
-              Submit
+              {loading ? <ClipLoader color="#36d7b7" /> : "Submit"}
             </button>
           </div>
         </form>

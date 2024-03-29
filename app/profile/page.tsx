@@ -4,10 +4,21 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Profile = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [collections, setCollections] = useState<any[]>([]);
+
+  const getCollections = async () => {
+    const response = await fetch("/api/collections");
+    const data = await response.json();
+    console.log(data);
+    setCollections(data);
+  };
+  useEffect(() => {
+    getCollections();
+  }, []);
 
   const handleOpen = () => setOpen(!open);
 
@@ -44,29 +55,47 @@ const Profile = () => {
               </button>
             </div>
             <div className="flex border h-64 md:h-80 lg:h-96 rounded-lg mt-6 md:mt-8 lg:mt-10 justify-center items-center">
-              <div className="flex flex-col justify-center items-center">
-                <h6 className="text-base md:text-lg lg:text-xl">
-                  You don&#39;t have any collection yet!
-                </h6>
-                <Image
-                  src="icons/col.svg"
-                  alt="Avatar"
-                  width="100"
-                  height="100"
-                  className="rounded-full py-4"
-                />
-                <Link
-                  href="/libraries/javascript"
-                  className="flex justify-center font-semibold items-center w-40 md:w-52 bg-teal mt-2 md:mt-3 p-3 rounded-md outline-none"
-                >
-                  Add Library
-                </Link>
-              </div>
+              {collections.length !== 0 ? (
+                <div className="grid lg:grid-cols-4 gap-8">
+                  {collections.map((item: any) => (
+                    <Link
+                      href={`/collections/${item.id}`}
+                      key={item.id}
+                      className="shadow-xl bg-green-200 p-3 w-32 justify-center items-center flex rounded-md"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col justify-center items-center">
+                  <h6 className="text-base md:text-lg lg:text-xl">
+                    You don&#39;t have any collection yet!
+                  </h6>
+                  <Image
+                    src="icons/col.svg"
+                    alt="Avatar"
+                    width="100"
+                    height="100"
+                    className="rounded-full py-4"
+                  />
+                  <Link
+                    href="/libraries/javascript"
+                    className="flex justify-center font-semibold items-center w-40 md:w-52 bg-teal mt-2 md:mt-3 p-3 rounded-md outline-none"
+                  >
+                    Add Library
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </>
       )}
-      <AddCollectionDialog open={open} handleOpen={handleOpen} />
+      <AddCollectionDialog
+        open={open}
+        handleOpen={handleOpen}
+        getCollections={getCollections}
+      />
     </div>
   );
 };
