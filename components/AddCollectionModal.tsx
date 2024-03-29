@@ -3,14 +3,10 @@
 import React, { useState } from "react";
 import { Dialog } from "@material-tailwind/react";
 import { AiOutlineClose } from "react-icons/ai";
-// import { PrismaClient } from "@prisma/client";
-
-// const prisma = new PrismaClient();
 
 export function AddCollectionDialog({ open, handleOpen }: any) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  // const [libraries, setLibraries] = useState([]);
 
   // handle add collection
   const handleSubmit = async (e: { preventDefault: () => void }) => {
