@@ -40,6 +40,9 @@ export function AddCollectionDialog({ open, handleOpen, getCollections }: any) {
   return (
     <>
       <Dialog
+        placeholder={""}
+        onPointerEnterCapture
+        onPointerLeaveCapture
         open={open}
         size="xs"
         handler={handleOpen}
