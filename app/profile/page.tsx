@@ -5,14 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import Loader from "@/components/common/Loader";
 
 const Profile = () => {
   const [open, setOpen] = useState(false);
   const [collections, setCollections] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const getCollections = async () => {
+    setLoading(true);
     const response = await fetch("/api/collections");
     const data = await response.json();
+    setLoading(false);
     console.log(data);
     setCollections(data);
   };
@@ -51,22 +55,28 @@ const Profile = () => {
                 onClick={handleOpen}
                 className="flex justify-center font-semibold items-center w-40 md:w-52 bg-teal p-3 rounded-md outline-none"
               >
-                Create Collection
+                {collections.length !== 0
+                  ? "Add Collection"
+                  : "Create Collection"}
               </button>
             </div>
             <div className="flex border h-64 md:h-80 lg:h-96 rounded-lg mt-6 md:mt-8 lg:mt-10 justify-center items-center">
               {collections.length !== 0 ? (
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                  {collections.map((item: any) => (
-                    <Link
-                      href={`/collections/${item.id}`}
-                      key={item.id}
-                      className="shadow-xl bg-green-200 p-3 w-32 justify-center items-center flex rounded-md"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
+                loading ? (
+                  <Loader />
+                ) : (
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                    {collections.map((item: any) => (
+                      <Link
+                        href={`/collections/${item.id}`}
+                        key={item.id}
+                        className="shadow-xl bg-green-200 p-3 w-32 justify-center items-center flex rounded-md"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )
               ) : (
                 <div className="flex flex-col justify-center items-center">
                   <h6 className="text-base md:text-lg lg:text-xl">
@@ -79,12 +89,14 @@ const Profile = () => {
                     height="100"
                     className="rounded-full py-4"
                   />
-                  <Link
-                    href="/libraries/javascript"
+                  <button
+                    onClick={handleOpen}
                     className="flex justify-center font-semibold items-center w-40 md:w-52 bg-teal mt-2 md:mt-3 p-3 rounded-md outline-none"
                   >
-                    Add Library
-                  </Link>
+                    {collections.length !== 0
+                      ? "Add Collection"
+                      : "Create Collection"}
+                  </button>
                 </div>
               )}
             </div>
