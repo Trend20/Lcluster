@@ -61,18 +61,18 @@ const Profile = () => {
                   : "Create Collection"}
               </button>
             </div>
-            <div className="flex border h-64 md:h-80 lg:h-96 rounded-lg mt-6 md:mt-8 lg:mt-10 justify-center items-center">
-              {collections.length !== 0 ? (
-                loading ? (
-                  <Loader />
-                ) : (
-                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 w-full p-5">
-                    {collections.map((item: any) => (
-                      <Collection key={item.id} collection={item} />
-                    ))}
-                  </div>
-                )
+            <div className="flex flex-col border p-5 h-auto w-full rounded-lg mt-6 md:mt-8 lg:mt-10 justify-center items-center">
+              {loading ? (
+                <Loader />
               ) : (
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full p-5">
+                  {collections.map((item: any) => (
+                    <Collection key={item.id} collection={item} />
+                  ))}
+                </div>
+              )}
+
+              {collections.length === 0 && !loading && (
                 <div className="flex flex-col justify-center items-center">
                   <h6 className="text-base md:text-lg lg:text-xl">
                     You don&#39;t have any collection yet!
@@ -93,6 +93,14 @@ const Profile = () => {
                       : "Create Collection"}
                   </button>
                 </div>
+              )}
+              {collections.length !== 0 && (
+                <Link
+                  href="/collections"
+                  className="flex justify-center font-semibold items-center w-40 md:w-52 bg-teal p-3 rounded-md outline-none"
+                >
+                  View All
+                </Link>
               )}
             </div>
           </div>

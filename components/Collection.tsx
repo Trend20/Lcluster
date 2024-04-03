@@ -8,12 +8,12 @@ interface CollectionProps {
 
 const Collection = ({ collection }: CollectionProps) => {
   return (
-    <div className="flex flex-col items-start p-3 bg-blue-gray-900 rounded-md w-full">
-      <h5 className="font-semibold capitalize">{collection.name}</h5>
+    <div className="flex flex-col items-start bg-boxdark p-3 rounded-md w-full">
+      <h5 className="font-semibold capitalize leading-10">{collection.name}</h5>
       <p className="capitalize">{collection.description}</p>
       <Link
         href={`/collections/${collection.id}`}
-        className="flex items-center text-sm"
+        className="flex items-center text-sm mt-5 bg-black p-3 rounded-md"
       >
         <i className="mr-3">
           <HiOutlineArrowLongRight color="#4ccd99" size={20} />
