@@ -41,7 +41,7 @@ const Signup = () => {
           <span className="text-base md:text-lg">Sign up with GitHub</span>
         </button>
       </div>
-      <div className="flex items-center w-full md:w-1/4 my-6 md:my-10">
+      {/* <div className="flex items-center w-full md:w-1/4 my-6 md:my-10">
         <hr className="border w-1/3 md:w-1/2" />
         <span className="mx-4 md:mx-6 text-base md:text-lg">OR</span>
         <hr className="border w-1/3 md:w-1/2" />
@@ -68,7 +68,7 @@ const Signup = () => {
             Send magic link
           </button>
         </form>
-      </div>
+      </div> */}
       <p className="mt-6 md:mt-8 text-base md:text-lg flex items-center">
         Already have an account?
         <Link
