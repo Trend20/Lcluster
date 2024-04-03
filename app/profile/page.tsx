@@ -65,7 +65,7 @@ const Profile = () => {
               {loading ? (
                 <Loader />
               ) : (
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full p-5">
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 w-full p-5">
                   {collections.map((item: any) => (
                     <Collection key={item.id} collection={item} />
                   ))}
