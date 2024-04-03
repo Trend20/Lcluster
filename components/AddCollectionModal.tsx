@@ -87,7 +87,7 @@ export function AddCollectionDialog({ open, handleOpen, getCollections }: any) {
               className="p-3 flex justify-center items-center bg-teal rounded-md font-semibold w-32"
               type="submit"
             >
-              {loading ? <ClipLoader color="#36d7b7" /> : "Submit"}
+              {loading ? <ClipLoader color="#fff" /> : "Submit"}
             </button>
           </div>
         </form>

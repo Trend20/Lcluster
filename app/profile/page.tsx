@@ -67,7 +67,7 @@ const Profile = () => {
                 <ClockLoader color="#36d7b7" />
               ) : (
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 w-full p-5">
-                  {collections.map((item: any) => (
+                  {collections.slice(0, 8).map((item: any) => (
                     <Collection key={item.id} collection={item} />
                   ))}
                 </div>
