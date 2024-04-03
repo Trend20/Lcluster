@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
 import Collection from "@/components/Collection";
+import { ClockLoader } from "react-spinners";
 
 const Profile = () => {
   const [open, setOpen] = useState(false);
@@ -63,7 +64,7 @@ const Profile = () => {
             </div>
             <div className="flex flex-col border p-5 h-auto w-full rounded-lg mt-6 md:mt-8 lg:mt-10 justify-center items-center">
               {loading ? (
-                <Loader />
+                <ClockLoader color="#36d7b7" />
               ) : (
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 w-full p-5">
                   {collections.map((item: any) => (
