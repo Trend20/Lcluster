@@ -6,6 +6,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
+import Collection from "@/components/Collection";
 
 const Profile = () => {
   const [open, setOpen] = useState(false);
@@ -65,15 +66,9 @@ const Profile = () => {
                 loading ? (
                   <Loader />
                 ) : (
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 w-full p-5">
                     {collections.map((item: any) => (
-                      <Link
-                        href={`/collections/${item.id}`}
-                        key={item.id}
-                        className="shadow-xl bg-green-200 p-3 w-32 justify-center items-center flex rounded-md"
-                      >
-                        {item.name}
-                      </Link>
+                      <Collection key={item.id} collection={item} />
                     ))}
                   </div>
                 )
