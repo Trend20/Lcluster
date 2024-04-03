@@ -7,7 +7,7 @@ const Spotlight = () => {
       <div className="flex flex-col items-center">
         <div className="text-center">
           <p className="max-w-full lg:max-w-[700px] text-xl font-bold lg:text-normal text-gray-500 dark:text-gray-400">
-            The platform for rapid progress. Made by Developer for Developers!
+            The platform for rapid progress. Made by Developers, for Developers!
           </p>
         </div>
         <div className="flex items-center justify-center w-full mt-8">
