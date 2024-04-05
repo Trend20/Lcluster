@@ -2,40 +2,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { HeaderLinks } from "@/types/header";
 import { useSession, signOut } from "next-auth/react";
 import { TbLogout } from "react-icons/tb";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
-
-const headerData: HeaderLinks[] = [
-  {
-    id: 1,
-    url: "#features",
-    name: "features",
-  },
-  {
-    id: 2,
-    url: "#pricing",
-    name: "pricing",
-  },
-  {
-    id: 3,
-    url: "/libraries/javascript",
-    name: "libraries",
-  },
-  {
-    id: 4,
-    url: "/profile",
-    name: "collection",
-  },
-  {
-    id: 5,
-    url: "#contact",
-    name: "contact us",
-  },
-];
+import { headerData } from "@/data/header";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
