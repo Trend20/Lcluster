@@ -26,4 +26,14 @@ export const headerData: HeaderLinks[] = [
     url: "#contact",
     name: "support",
   },
+  {
+    id: 6,
+    url: "#recommend",
+    name: "recommendation",
+  },
+  {
+    id: 7,
+    url: "#community",
+    name: "community",
+  },
 ];

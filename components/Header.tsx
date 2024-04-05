@@ -55,7 +55,7 @@ const Header = () => {
           }`}
         >
           <nav
-            className={`flex lg:w-1/2 lg:justify-end lg:bg-transparent w-full rounded-md items-start md:items-center flex-col lg:flex-row space-y-4 md:space-y-0 md:space-x-6 md:border-none py-4 md:py-0`}
+            className={`flex lg:w-3/4 lg:justify-center lg:bg-transparent w-full rounded-md items-start lg:items-center flex-col lg:flex-row space-y-4 md:space-y-0 md:space-x-6 md:border-none py-4 md:py-0`}
           >
             {headerData.map((item: any) => (
               <Link
