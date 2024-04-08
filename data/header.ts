@@ -24,7 +24,7 @@ export const headerData: HeaderLinks[] = [
   {
     id: 5,
     url: "#contact",
-    name: "support",
+    name: "contact us",
   },
   {
     id: 6,
