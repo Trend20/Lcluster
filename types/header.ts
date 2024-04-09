@@ -1,5 +1,6 @@
 export interface HeaderLinks {
   id: number | string;
-  url: string;
+  homepageUrl: string;
+  authenticatedUrl: string;
   name: string;
 }

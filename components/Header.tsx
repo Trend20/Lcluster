@@ -62,7 +62,7 @@ const Header = () => {
                 onClick={() => setShowNavLinks(false)}
                 key={item.id}
                 className={`text-normal capitalize font-medium`}
-                href={item.url}
+                href={item.homepageUrl}
               >
                 {item.name}
               </Link>

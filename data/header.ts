@@ -3,37 +3,44 @@ import { HeaderLinks } from "@/types/header";
 export const headerData: HeaderLinks[] = [
   {
     id: 1,
-    url: "#features",
+    homepageUrl: "#features",
+    authenticatedUrl: "/features",
     name: "features",
   },
   {
     id: 2,
-    url: "#pricing",
+    homepageUrl: "#pricing",
+    authenticatedUrl: "/pricing",
     name: "pricing",
   },
   {
     id: 3,
-    url: "/libraries/javascript",
+    homepageUrl: "/libraries/javascript",
+    authenticatedUrl: "/libraries/javascript",
     name: "libraries",
   },
   {
     id: 4,
-    url: "/profile",
+    homepageUrl: "/profile",
+    authenticatedUrl: "/profile",
     name: "collection",
   },
   {
     id: 5,
-    url: "#contact",
+    homepageUrl: "#contact",
+    authenticatedUrl: "/contact",
     name: "contact us",
   },
   {
     id: 6,
-    url: "#recommend",
+    homepageUrl: "#prompt",
+    authenticatedUrl: "/recommend",
     name: "recommendation",
   },
   {
     id: 7,
-    url: "#community",
+    homepageUrl: "#prompt",
+    authenticatedUrl: "/community",
     name: "community",
   },
 ];
