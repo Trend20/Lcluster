@@ -1,34 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-const libDetails = [
-    {
-        id: 1,
-        url: "/libraries/javascript",
-        icon: "/icons/javascript.svg",
-    },
-    {
-        id: 2,
-        url: "/libraries/python",
-        icon: "/icons/python.svg",
-    },
-    {
-        id: 3,
-        url: "/libraries/php",
-        icon: "/icons/php.svg",
-    },
-    {
-        id: 4,
-        url: "/libraries/ruby",
-        icon: "/icons/ruby.svg",
-    },
-    {
-        id: 5,
-        url: "/libraries/java",
-        icon: "/icons/java.svg",
-    },
-];
+import {libDetails} from "@/data/lib";
 
 const Libraries = () => {
     return (
@@ -43,9 +16,9 @@ const Libraries = () => {
                     </p>
                 </div>
                 <div className="flex justify-center items-center w-full md:w-3/4 mt-8 md:mt-10">
-                    <div className="grid gap-6 grid-cols-1  lg:grid-cols-5 w-full">
+                    <div className="flex justify-center items-center space-x-8 w-full">
                         {libDetails.map((info: any) => (
-                                <Link key={info.id} href={info.url} className="flex justify-center items-center shadow-2xl p-6 bg-boxdark rounded-lg">
+                                <Link key={info.id} href={info.url} className="flex justify-center items-center">
                                     <Image src={info.icon} alt={info.url} width={50} height={50} />
                                 </Link>
                         ))}
