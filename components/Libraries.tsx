@@ -43,7 +43,7 @@ const Libraries = () => {
                     </p>
                 </div>
                 <div className="flex justify-center items-center w-full md:w-3/4 mt-8 md:mt-10">
-                    <div className="grid gap-6 lg:grid-cols-5 w-full">
+                    <div className="grid gap-6 grid-cols-1  lg:grid-cols-5 w-full">
                         {libDetails.map((info: any) => (
                                 <Link key={info.id} href={info.url} className="flex justify-center items-center shadow-2xl p-6 bg-boxdark rounded-lg">
                                     <Image src={info.icon} alt={info.url} width={50} height={50} />
