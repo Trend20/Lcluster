@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const libDetails = [
     {
@@ -44,16 +45,9 @@ const Libraries = () => {
                 <div className="flex justify-center items-center w-full md:w-3/4 mt-8 md:mt-10">
                     <div className="grid gap-6 lg:grid-cols-5 w-full">
                         {libDetails.map((info: any) => (
-                            <div
-                                key={info.id}
-                                className="flex flex-col space-y-2 shadow-2xl p-6 lg:p-8 bg-boxdark rounded-lg"
-                            >
-                                <Link href={info.url}>
-                                    <i className="flex justify-center items-center">
-                                        {info.icon}
-                                    </i>
+                                <Link key={info.id} href={info.url} className="flex justify-center items-center shadow-2xl p-6 bg-boxdark rounded-lg">
+                                    <Image src={info.icon} alt={info.url} width={50} height={50} />
                                 </Link>
-                            </div>
                         ))}
                     </div>
                 </div>
