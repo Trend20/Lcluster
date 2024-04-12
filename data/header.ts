@@ -15,8 +15,8 @@ export const headerData: HeaderLinks[] = [
   },
   {
     id: 3,
-    homepageUrl: "/libraries/javascript",
-    authenticatedUrl: "/libraries/javascript",
+    homepageUrl: "#libraries",
+    authenticatedUrl: "/libraries",
     name: "libraries",
   },
   {

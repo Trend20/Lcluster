@@ -9,7 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
-import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 export default function RootLayout({
   children,
