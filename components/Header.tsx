@@ -6,12 +6,14 @@ import { useSession, signOut } from "next-auth/react";
 import { TbLogout } from "react-icons/tb";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./common/ThemeToggle";
 import { headerData } from "@/data/header";
 
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const [showNavLinks, setShowNavLinks] = useState(false);
+  const pathname = usePathname();
+  const isHomepage = pathname === "/"
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +64,7 @@ const Header = () => {
                 onClick={() => setShowNavLinks(false)}
                 key={item.id}
                 className={`text-normal capitalize font-medium`}
-                href={item.homepageUrl}
+                href={isHomepage ? item.homepageUrl : item.authenticatedUrl}
               >
                 {item.name}
               </Link>
