@@ -18,5 +18,4 @@ const Search = ({ value, onChange }: SearchProps) => {
     </div>
   );
 };
-
 export default Search;

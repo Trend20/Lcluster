@@ -9,8 +9,8 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Edutext",
-  description: "Home Page for Edutext",
+  title: "LCluster",
+  description: "LCluster Homepage",
 };
 
 export default async function Home() {

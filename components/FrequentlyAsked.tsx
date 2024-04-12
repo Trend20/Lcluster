@@ -61,5 +61,4 @@ const FrequentlyAsked = () => {
     </div>
   );
 };
-
 export default FrequentlyAsked;

@@ -93,5 +93,5 @@ export function AddCollectionDialog({ open, handleOpen, getCollections }: any) {
         </form>
       </Dialog>
     </>
-  );
+  )
 }

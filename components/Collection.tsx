@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import React from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
@@ -14,7 +14,7 @@ const Collection = ({ collection }: CollectionProps) => {
       <Link
         href={`/collections/${collection.id}`}
         className="flex items-center text-sm mt-5 bg-black p-3 rounded-md"
-      >
+     >
         <i className="mr-3">
           <HiOutlineArrowLongRight color="#4ccd99" size={20} />
         </i>
