@@ -3,34 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-
-const tech = [
-  {
-    id: 1,
-    name: "javascript",
-    icon: "/icons/javascript.svg",
-  },
-  {
-    id: 2,
-    name: "python",
-    icon: "/icons/python.svg",
-  },
-  {
-    id: 3,
-    name: "php",
-    icon: "/icons/php.svg",
-  },
-  {
-    id: 4,
-    name: "ruby",
-    icon: "/icons/ruby.svg",
-  },
-  {
-    id: 5,
-    name: "java",
-    icon: "/icons/java.svg",
-  },
-];
+import {libDetails} from "@/data/lib";
 
 const Libraries = async () => {
   const session = await getServerSession();
@@ -45,7 +18,7 @@ const Libraries = async () => {
         </h1>
       </div>
       <div className="flex items-center space-x-3 flex-col lg:flex-row m-auto mt-8 px-5">
-        {tech.map((item) => (
+        {libDetails.map((item) => (
           <Link
             href={`/libraries/${item.name}`}
             className="flex flex-col p-5 justify-center items-center"
