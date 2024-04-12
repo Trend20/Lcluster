@@ -15,6 +15,8 @@ const Signin = () => {
   console.log("Session: ", session);
 
   if (session.status === "authenticated") {
+    localStorage.setItem("session", JSON.stringify(session));
+    localStorage.setItem("isLoggedIn", "true");
     return redirect("/profile");
   } else {
     console.log("not authenticated");
@@ -32,6 +34,7 @@ const Signin = () => {
           />
         </Link>
       </div>
+      <h6 className="mt-4 text-xl font-semibold">Sign In to Get Started!</h6>
       <div className="w-full md:w-1/4 justify-center items-center flex flex-col">
         <button
           onClick={() => signIn("google")}

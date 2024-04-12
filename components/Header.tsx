@@ -14,6 +14,7 @@ const Header = () => {
   const [showNavLinks, setShowNavLinks] = useState(false);
   const pathname = usePathname();
   const isHomepage = pathname === "/"
+  const { data: session } = useSession();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +27,6 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const { data: session } = useSession();
-  console.log(session);
 
   const isScrolled = scrollY > 0;
   return (

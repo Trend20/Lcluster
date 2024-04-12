@@ -30,11 +30,6 @@ const tech = [
     name: "java",
     icon: "/icons/java.svg",
   },
-  {
-    id: 6,
-    name: "typescript",
-    icon: "/icons/typescript.svg",
-  },
 ];
 
 const Libraries = async () => {
@@ -49,11 +44,11 @@ const Libraries = async () => {
           Choose Project Stack
         </h1>
       </div>
-      <div className="grid w-1/2 m-auto grid-cols-3 mt-8 gap-5 border  px-5 py-10 rounded-md">
+      <div className="flex items-center space-x-3 flex-col lg:flex-row m-auto mt-8 px-5">
         {tech.map((item) => (
           <Link
             href={`/libraries/${item.name}`}
-            className="flex flex-col bg-boxdark p-5 justify-center items-center rounded-md"
+            className="flex flex-col p-5 justify-center items-center"
             key={item.id}
           >
             <Image
@@ -63,7 +58,6 @@ const Libraries = async () => {
               height="100"
               className="flex w-10.5 h-10.5"
             />
-            <p className="flex capitalize mt-2">{item.name} Project</p>
           </Link>
         ))}
       </div>
