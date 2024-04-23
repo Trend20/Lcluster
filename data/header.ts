@@ -29,7 +29,7 @@ export const headerData: HeaderLinks[] = [
     id: 5,
     homepageUrl: "#contact",
     authenticatedUrl: "/contact",
-    name: "contact us",
+    name: "support",
   },
   {
     id: 6,
