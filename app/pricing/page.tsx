@@ -1,9 +1,12 @@
 import React from "react";
+import Pricing from "@/components/Pricing";
 
-const Pricing = () => {
-  return <div>
-
-  </div>;
+const PricingPage = () => {
+  return (
+      <div className="py-28">
+        <Pricing />
+      </div>
+  )
 };
 
-export default Pricing;
+export default PricingPage;
