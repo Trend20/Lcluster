@@ -35,7 +35,7 @@ export const headerData: HeaderLinks[] = [
     id: 6,
     homepageUrl: "#prompt",
     authenticatedUrl: "/recommend",
-    name: "recommendation",
+    name: "recommend",
   },
   {
     id: 7,

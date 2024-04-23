@@ -1,7 +1,9 @@
 import React from "react";
 
 const Pricing = () => {
-  return <div>Pricing</div>;
+  return <div>
+
+  </div>;
 };
 
 export default Pricing;
