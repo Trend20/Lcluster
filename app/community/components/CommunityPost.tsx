@@ -12,7 +12,9 @@ const CommunityPost = ({post}:any) => {
                     {post.title}
                 </p>
                 <div className="flex items-center gap-4">
-                    <Image src={post.icon} alt={post.author} width={50} height={50} className='flex items-center justify-center rounded-full' />
+                    <div className='flex items-center justify-center rounded-full p-2'>
+                        <Image src={post.icon} alt={post.author} width={50} height={50} className='rounded-full object-cover'/>
+                    </div>
                     <div>
                         <div className="font-medium">{post.author}</div>
                         <div className="text-sm text-gray-500 dark:text-gray-400">2 hours ago</div>
