@@ -1,7 +1,27 @@
-import React from "react";
+"use client"
+import React, {useEffect, useState} from "react";
 import { CiSearch } from "react-icons/ci";
+import CollectionCard from "@/app/collections/components/CollectionCard";
+import {ClockLoader} from "react-spinners";
 
 const Collections = () => {
+  const [open, setOpen] = useState(false);
+  const [collections, setCollections] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+
+  const getCollections = async () => {
+    setLoading(true);
+    const response = await fetch("/api/collections");
+    const data = await response.json();
+    setLoading(false);
+    console.log(data);
+    setCollections(data);
+  };
+  useEffect(() => {
+    getCollections();
+  }, []);
+
+  const handleOpen = () => setOpen(!open);
   return (
       <div className="px-36 mt-20 py-30">
         <div className="flex items-center justify-between mb-6">
@@ -15,84 +35,16 @@ const Collections = () => {
           </div>
           <button className="ml-4 rounded-md p-3 bg-teal">Add Collection</button>
         </div>
-        <div className="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          <div className="h-full border rounded-lg p-4">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-lg font-semibold">Branding</h3>
-                <p className="text-gray-500 dark:text-gray-400 mt-2">A collection of branding assets and guidelines.</p>
+        {
+          loading ? <div className="flex w-full justify-center items-center"><ClockLoader color="#36d7b7" /></div> :
+              <div className="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {
+                  collections.map((collection: any) => (
+                      <CollectionCard collection={collection} key={collection.id}/>
+                  ))
+                }
               </div>
-              <button className="mt-4 border rounded-md p-3">
-                View Libraries
-              </button>
-            </div>
-          </div>
-          <div className="h-full border rounded-lg p-4">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-lg font-semibold">Web Design</h3>
-                <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  A collection of web design components and templates.
-                </p>
-              </div>
-              <button className="mt-4 border rounded-md p-3">
-                View Libraries
-              </button>
-            </div>
-          </div>
-          <div className="h-full border rounded-lg p-4">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-lg font-semibold">Mobile Design</h3>
-                <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  A collection of mobile design assets and patterns.
-                </p>
-              </div>
-              <button className="mt-4 border rounded-md p-3">
-                View Libraries
-              </button>
-            </div>
-          </div>
-          <div className="h-full border rounded-lg p-4">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-lg font-semibold">Illustrations</h3>
-                <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  A collection of custom illustrations for your projects.
-                </p>
-              </div>
-              <button className="mt-4 border rounded-md p-3">
-                View Libraries
-              </button>
-            </div>
-          </div>
-          <div className="h-full border rounded-lg p-4">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-lg font-semibold">Icons</h3>
-                <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  A collection of high-quality icons for your designs.
-                </p>
-              </div>
-              <button className="mt-4 border rounded-md p-3">
-                View Libraries
-              </button>
-            </div>
-          </div>
-          <div className="h-full border rounded-lg p-4">
-            <div className="flex flex-col justify-between h-full">
-              <div>
-                <h3 className="text-lg font-semibold">Prototypes</h3>
-                <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  A collection of interactive prototypes for user testing.
-                </p>
-              </div>
-              <button className="mt-4 border rounded-md p-3">
-                View Libraries
-              </button>
-            </div>
-          </div>
-        </div>
+        }
       </div>
   )
 };

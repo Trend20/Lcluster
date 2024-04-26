@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import Loader from "@/components/common/Loader";
 import Collection from "@/components/Collection";
 import { ClockLoader } from "react-spinners";
 
