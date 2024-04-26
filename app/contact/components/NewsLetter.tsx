@@ -19,13 +19,13 @@ const NewsLatter = () => {
                     type="text"
                     name="name"
                     placeholder="Enter your name"
-                    className=" mb-4 w-full rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-teal dark:border-transparent dark:text-body-color-dark dark:shadow-two dark:focus:shadow-none"
+                    className=" mb-4 w-full rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-teal"
                 />
                 <input
                     type="email"
                     name="email"
                     placeholder="Enter your email"
-                    className=" mb-4 w-full rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-teal dark:border-transparent dark:text-body-color-dark dark:shadow-two dark:focus:shadow-none"
+                    className=" mb-4 w-full rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-teal"
                 />
                 <input
                     type="submit"

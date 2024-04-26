@@ -31,7 +31,7 @@ const Contact = () => {
                                             <input
                                                 type="text"
                                                 placeholder="Enter your name"
-                                                className="w-full rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-teal dark:border-transparent dark:text-body-color-dark dark:shadow-two dark:focus:border-teal dark:focus:shadow-none"
+                                                className="w-full rounded-sm border bg-transparent px-6 py-3 text-base outline-none focus:border-teal"
                                             />
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@ const Contact = () => {
                                             <input
                                                 type="email"
                                                 placeholder="Enter your email"
-                                                className="w-full rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-teal dark:border-transparent dark:text-body-color-dark dark:shadow-two dark:focus:border-teal dark:focus:shadow-none"
+                                                className="w-full rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none"
                                             />
                                         </div>
                                     </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                                                 name="message"
                                                 rows={5}
                                                 placeholder="Enter your Message"
-                                                className="w-full resize-none rounded-sm border bg-transparent px-6 py-3 text-base text-body-color outline-none focus:border-teal dark:border-transparent dark:bg-transparent dark:text-body-color-dark dark:shadow-two dark:focus:border-teal dark:focus:shadow-none"
+                                                className="w-full resize-none rounded-sm border bg-transparent px-6 py-3 outline-none focus:border-teal"
                                             ></textarea>
                                         </div>
                                     </div>
