@@ -21,9 +21,9 @@ export const headerData: HeaderLinks[] = [
   },
   {
     id: 4,
-    homepageUrl: "/profile",
-    authenticatedUrl: "/profile",
-    name: "collection",
+    homepageUrl: "/collections",
+    authenticatedUrl: "/collections",
+    name: "collections",
   },
   {
     id: 5,
