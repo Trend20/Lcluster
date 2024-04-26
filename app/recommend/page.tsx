@@ -11,7 +11,7 @@ const Recommend = () =>{
                                 Enter your prompt:
                             </label>
                             <textarea
-                                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200"
+                                className="w-full px-3 py-2 border bg-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-teal"
                                 id="prompt"
                                 placeholder="Type your prompt here..."
                                 rows={3}
@@ -19,7 +19,7 @@ const Recommend = () =>{
                         </div>
                         <div className="flex justify-end">
                             <button
-                                className="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-blue-600 dark:hover:bg-blue-700"
+                                className="px-4 py-2 text-sm font-medium text-white bg-teal rounded-md focus:outline-none focus:ring-2 focus:ring-teal"
                                 type="submit"
                             >
                                 Generate Response
