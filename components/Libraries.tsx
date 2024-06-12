@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {libDetails} from "@/data/lib";
 import {useSession} from "next-auth/react";
+import Heading from "@/components/common/Heading";
 
 const Libraries = () => {
     const { data:session  } = useSession();
@@ -12,9 +13,7 @@ const Libraries = () => {
         <section className="w-full justify-center items-center flex mt-8 py-8 md:py-12 lg:py-16 xl:py-20 px-4 md:px-6 xl:px-36" id="libraries">
             <div className="w-full justify-center flex flex-col items-center gap-4">
                 <div className="text-center">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-                        Choose your language.
-                    </h1>
+                    <Heading headingText={' Choose your language.'} />
                     <p className="mx-auto max-w-full lg:max-w-[600px] text-gray-500 md:text-base lg:text-lg dark:text-gray-400 mt-4 md:mt-6">
                         We have a wide range of libraries tailored to your favourite programming languages.
                     </p>
