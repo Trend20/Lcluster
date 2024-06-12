@@ -4,6 +4,7 @@ import { LuFileCode } from "react-icons/lu";
 import { GoShare } from "react-icons/go";
 import { CgInsights } from "react-icons/cg";
 import Heading from "@/components/common/Heading";
+import PitchCard from "@/components/PitchCard";
 
 const productDetails = [
   {
@@ -50,18 +51,7 @@ const ProductPitch = () => {
         <div className="flex justify-center items-center w-full md:w-3/4 mt-8 md:mt-10">
           <div className="grid gap-6 lg:grid-cols-2 w-full">
             {productDetails.map((info: any) => (
-              <div
-                key={info.id}
-                className="flex flex-col space-y-2 shadow-2xl p-6 lg:p-8 bg-boxdark rounded-lg"
-              >
-                <i className="rounded-full bg-teal w-10 h-10 p-2 flex justify-center items-center">
-                  {info.icon}
-                </i>
-                <h2 className="text-lg font-semibold">{info.title}</h2>
-                <p className="text-gray-500 dark:text-gray-400 text-sm lg:text-base">
-                  {info.description}
-                </p>
-              </div>
+              <PitchCard info={info} key={info.id} />
             ))}
           </div>
         </div>
