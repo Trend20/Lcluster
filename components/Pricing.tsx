@@ -1,6 +1,7 @@
 import React from "react";
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { BsFillBookmarkCheckFill } from "react-icons/bs";
+import Heading from "@/components/common/Heading";
 
 const pricingData = [
   {
@@ -61,9 +62,7 @@ const Pricing = () => {
             Plans that scale
           </div>
           <div className="space-y-2">
-            <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight">
-              Pick the perfect plan
-            </h2>
+            <Heading headingText={'Pick the perfect plan'} />
             <p className="max-w-full lg:max-w-[700px] text-sm md:text-base lg:text-lg xl:text-xl text-gray-500 dark:text-gray-400">
               Start free! Then choose the right plan for you or your team.
             </p>

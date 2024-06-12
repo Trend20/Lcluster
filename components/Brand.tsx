@@ -7,7 +7,6 @@ interface BrandProps {
 const Brand = ({item}: BrandProps) =>{
     return (
         <div
-            key={item.id}
             className="mx-auto flex w-full items-center justify-center"
         >
             <Image

@@ -3,6 +3,7 @@ import { MdAccessTime } from "react-icons/md";
 import { LuFileCode } from "react-icons/lu";
 import { GoShare } from "react-icons/go";
 import { CgInsights } from "react-icons/cg";
+import Heading from "@/components/common/Heading";
 
 const productDetails = [
   {
@@ -40,9 +41,7 @@ const ProductPitch = () => {
     <section className="w-full justify-center items-center flex mt-8 py-8 md:py-12 lg:py-16 xl:py-20 px-4 md:px-6 xl:px-36">
       <div className="w-full justify-center flex flex-col items-center gap-4">
         <div className="text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-            Say Goodbye to Time Wasting.
-          </h1>
+          <Heading headingText={"Say Goodbye to Time Wasting."} />
           <p className="mx-auto max-w-full lg:max-w-[600px] text-gray-500 md:text-base lg:text-lg dark:text-gray-400 mt-4 md:mt-6">
             Discover, integrate, and innovate with the best third-party
             libraries.
