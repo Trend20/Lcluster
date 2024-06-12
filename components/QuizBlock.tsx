@@ -16,7 +16,7 @@ const QuizBlock = ({index, openIndex, faq, toggleAccordion}: QuizBlockProps) => 
                 className="w-full flex items-center justify-between p-3 md:p-4 bg-gray-200"
                 onClick={() => toggleAccordion(index)}
             >
-                <span>{faq.question}</span>
+                <span className="font-semibold">{faq.question}</span>
                 <span className="text-lg md:text-xl">
                   {openIndex === index ? (
                       <LiaTimesSolid fill="#4ccd99"/>
@@ -26,7 +26,7 @@ const QuizBlock = ({index, openIndex, faq, toggleAccordion}: QuizBlockProps) => 
                 </span>
             </button>
             {openIndex === index && (
-                <div className="px-3 md:px-4 py-2">
+                <div className="px-3 md:px-4 py-2 text-whiten">
                     <p>{faq.answer}</p>
                 </div>
             )}
