@@ -1,6 +1,6 @@
 import { brands } from "@/data/brands";
-import Image from "next/image";
 import React from "react";
+import Brand from "@/components/Brand";
 
 const Spotlight = () => {
   return (
@@ -13,18 +13,7 @@ const Spotlight = () => {
         </div>
         <div className="flex items-center justify-center w-full mt-8">
           {brands.map((item) => (
-            <div
-              key={item.id}
-              className="mx-auto flex w-full items-center justify-center"
-            >
-              <Image
-                alt={item.name}
-                className="aspect-[2/1] cursor-pointer overflow-hidden rounded-lg object-contain object-center"
-                height="100"
-                src={item.icon}
-                width="100"
-              />
-            </div>
+            <Brand item={item} key={item.id} />
           ))}
         </div>
       </div>
