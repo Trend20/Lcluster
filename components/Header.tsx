@@ -101,9 +101,6 @@ const Header = () => {
             )}
           </button>
         </div>
-        {/* <div className="absolute right-5">
-          <ThemeToggle />
-        </div> */}
       </div>
     </div>
   );
