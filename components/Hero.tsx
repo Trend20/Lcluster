@@ -14,7 +14,7 @@ const Hero = () => {
               className="text-3xl md:text-5xl font-extrabold capitalize w-full md:w-[880px]"
               style={{ lineHeight: "1.3" }}
             >
-              Access <span className="text-teal">third-party</span> libraries{" "}
+              Access Javascript <span className="text-teal">third-party</span> libraries{" "}
               <span className="text-teal">effortlessly</span>.
             </h1>
             <p className="mx-auto leading-6 items-center max-w-full md:max-w-[600px] py-4 md:py-8 text-center text-gray-600 dark:text-gray-400 md:text-lg">

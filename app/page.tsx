@@ -7,7 +7,6 @@ import Spotlight from "@/components/Spotlight";
 import { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import Libraries from "@/components/Libraries";
 
 export const metadata: Metadata = {
   title: "LCluster",
@@ -26,7 +25,6 @@ export default async function Home() {
       <ProductPitch />
       <Features />
       <Pricing />
-        <Libraries />
       <FrequentlyAsked />
     </main>
   );
