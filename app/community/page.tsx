@@ -1,7 +1,7 @@
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import {posts} from "@/data/posts";
-import CommunityPost from "@/app/community/components/CommunityPost";
+import CommunityPost from "@/components/CommunityPost";
 
 const Community = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import NewsLatter from "@/app/contact/components/NewsLetter";
+import NewsLatter from "@/components/NewsLetter";
 
 const Contact = () => {
     return (

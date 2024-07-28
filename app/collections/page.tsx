@@ -1,7 +1,7 @@
 "use client"
 import React, {useEffect, useState} from "react";
 import { CiSearch } from "react-icons/ci";
-import CollectionCard from "@/app/collections/components/CollectionCard";
+import CollectionCard from "@/components/CollectionCard";
 import {ClockLoader} from "react-spinners";
 
 const Collections = () => {
