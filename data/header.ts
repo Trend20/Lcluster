@@ -15,30 +15,24 @@ export const headerData: HeaderLinks[] = [
   },
   {
     id: 3,
-    homepageUrl: "#libraries",
-    authenticatedUrl: "/libraries",
-    name: "libraries",
-  },
-  {
-    id: 4,
     homepageUrl: "/collections",
     authenticatedUrl: "/collections",
     name: "collections",
   },
   {
-    id: 5,
+    id: 4,
     homepageUrl: "#contact",
     authenticatedUrl: "/contact",
     name: "support",
   },
   {
-    id: 6,
+    id: 5,
     homepageUrl: "#prompt",
     authenticatedUrl: "/recommend",
     name: "recommend",
   },
   {
-    id: 7,
+    id: 6,
     homepageUrl: "#prompt",
     authenticatedUrl: "/community",
     name: "community",

@@ -1,6 +1,7 @@
 import { brands } from "@/data/brands";
 import React from "react";
 import Brand from "@/components/Brand";
+import FeaturedCompanySlider from "@/components/sliders/FeaturedCompanySlider";
 
 const Spotlight = () => {
   return (
@@ -12,9 +13,11 @@ const Spotlight = () => {
           </p>
         </div>
         <div className="flex items-center justify-center w-full mt-8">
-          {brands.map((item) => (
-            <Brand item={item} key={item.id} />
-          ))}
+          <FeaturedCompanySlider>
+            {brands.map((item) => (
+              <Brand item={item} key={item.id} />
+            ))}
+          </FeaturedCompanySlider>
         </div>
       </div>
     </section>
