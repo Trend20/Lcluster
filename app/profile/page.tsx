@@ -18,7 +18,7 @@ const Profile = () => {
     const response = await fetch("/api/collections");
     const data = await response.json();
     setLoading(false);
-    console.log(data);
+    console.log("my collections here!...", data);
     setCollections(data);
   };
   useEffect(() => {
@@ -65,11 +65,17 @@ const Profile = () => {
               {loading ? (
                 <ClockLoader color="#36d7b7" />
               ) : (
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 w-full p-5">
-                  {collections.slice(0, 8).map((item: any) => (
-                    <Collection key={item.id} collection={item} />
-                  ))}
-                </div>
+                <>
+                  {collections.length !== 0 ? (
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 w-full p-5">
+                      {collections.slice(0, 8).map((item: any) => (
+                        <Collection key={item.id} collection={item} />
+                      ))}
+                    </div>
+                  ) : (
+                    <p>No collections found!</p>
+                  )}
+                </>
               )}
 
               {collections.length === 0 && !loading && (
