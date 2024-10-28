@@ -13,7 +13,7 @@ const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const [showNavLinks, setShowNavLinks] = useState(false);
   const pathname = usePathname();
-  const isHomepage = pathname === "/"
+  const isHomepage = pathname === "/";
   const { data: session } = useSession();
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const Header = () => {
           <div className="flex lg:justify-end lg:w-1/4 py-1 items-center flex-shrink-0">
             {!session ? (
               <Link
-                href={"/auth/signin"}
+                href={"/signin"}
                 className="md:flex justify-center lg:items-center font-medium w-36 bg-teal p-3 rounded-md outline-none"
               >
                 Try for Free
